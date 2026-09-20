@@ -24,6 +24,7 @@ Usage:
     python3 run_all.py --skip-dq-check     # skip the standalone DQ report (step 1)
     python3 run_all.py --skip-ml           # skip model (re)training (step 3)
     python3 run_all.py --dq-threshold 70   # loosen/tighten the ETL's DQ gate
+    python3 run_all.py --target postgres --database-url postgresql://user:pass@localhost:5432/ecommerce_dw
 """
 import argparse
 import logging
@@ -80,7 +81,12 @@ def step_etl():
     os.chdir(os.path.join(HERE, "etl"))
     with _OnPath("etl"):
         from pipeline import run_pipeline
-        run_pipeline(dq_threshold=ARGS.dq_threshold, skip_dq_gate=ARGS.skip_dq_gate)
+        run_pipeline(
+            dq_threshold=ARGS.dq_threshold,
+            skip_dq_gate=ARGS.skip_dq_gate,
+            target=ARGS.target,
+            database_url=ARGS.database_url,
+        )
     os.chdir(HERE)
 
 
@@ -130,6 +136,9 @@ if __name__ == "__main__":
     parser.add_argument("--skip-ml", action="store_true")
     parser.add_argument("--skip-dq-gate", action="store_true", help="skip the ETL's DQ gate (load regardless of score)")
     parser.add_argument("--dq-threshold", type=float, default=80.0)
+    parser.add_argument("--target", choices=("sqlite", "postgres", "mysql"), default="sqlite",
+                        help="warehouse target for the e-commerce ETL")
+    parser.add_argument("--database-url", help="required for postgres/mysql; defaults to DATABASE_URL")
     parser.add_argument("--serve", action="store_true", help="start the unified API after the pipeline finishes")
     ARGS = parser.parse_args()
 

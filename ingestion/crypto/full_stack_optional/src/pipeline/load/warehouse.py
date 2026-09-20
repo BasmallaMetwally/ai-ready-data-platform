@@ -122,7 +122,7 @@ def upsert(
         affected = cur.rowcount
 
     log.info("upserted %s rows into %s.%s", affected, schema, table)
-    return affected
+    return int(affected)
 
 
 def upsert_klines(rows: Sequence[dict[str, Any]], settings: Settings | None = None) -> int:

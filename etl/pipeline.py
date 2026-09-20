@@ -85,7 +85,13 @@ def run_dq_gate(transformed: dict, threshold: float = 80.0, fail_hard: bool = Tr
     return gate_results
 
 
-def run_pipeline(skip_validation: bool = False, dq_threshold: float = 80.0, skip_dq_gate: bool = False):
+def run_pipeline(
+    skip_validation: bool = False,
+    dq_threshold: float = 80.0,
+    skip_dq_gate: bool = False,
+    target: str = "sqlite",
+    database_url: str | None = None,
+):
     setup_logging()
     start = time.time()
     logger.info("========== بدء ETL Pipeline ==========")
@@ -129,7 +135,7 @@ def run_pipeline(skip_validation: bool = False, dq_threshold: float = 80.0, skip
 
     try:
         logger.info("[5/5] Load...")
-        load_all(transformed)
+        load_all(transformed, target=target, database_url=database_url)
     except Exception as e:
         logger.exception("فشل في مرحلة Load: %s", e)
         raise LoadError("Load failed") from e
@@ -139,8 +145,15 @@ def run_pipeline(skip_validation: bool = False, dq_threshold: float = 80.0, skip
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Run the e-commerce ETL pipeline.")
+    parser.add_argument("--target", choices=("sqlite", "postgres", "mysql"), default="sqlite")
+    parser.add_argument("--database-url", help="Required for postgres/mysql; defaults to DATABASE_URL.")
+    parser.add_argument("--dq-threshold", type=float, default=80.0)
+    args = parser.parse_args()
     try:
-        run_pipeline()
+        run_pipeline(target=args.target, database_url=args.database_url, dq_threshold=args.dq_threshold)
     except PipelineError:
         logger.critical("توقف الـ Pipeline بسبب خطأ غير قابل للتعافي. راجع logs/etl.log للتفاصيل.")
         raise

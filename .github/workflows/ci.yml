@@ -110,7 +110,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-      - run: pip install "apache-airflow==2.9.3" apache-airflow-providers-apache-spark pydantic-settings pandas numpy
+      # DAG modules import the warehouse and lake loaders at parse time, so
+      # their direct runtime dependencies must be present for DagBag to be a
+      # meaningful check (not merely for the scheduler/container image).
+      - run: pip install "apache-airflow==2.9.3" apache-airflow-providers-apache-spark pydantic-settings pandas numpy requests boto3 "psycopg[binary]==3.2.3" "pyarrow==17.0.0"
       - name: Check DAGs import without errors
         env:
           # relative to working-directory (full_stack_optional): src is
