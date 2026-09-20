@@ -1,17 +1,52 @@
-# Unified Data Platform
+# AI-Ready Data Platform
 
-A merge of three previously separate projects:
+[![CI](https://github.com/BasmallaMetwally/ai-ready-data-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/BasmallaMetwally/ai-ready-data-platform/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Data%20Quality](https://img.shields.io/badge/Data%20Quality-enforced-2E7D32)](#what-this-project-demonstrates)
 
-1. **Data Quality (DQ) System** — `dq/`
-2. **E-commerce analytics platform** (ETL + ML + API) — `etl/`, `ml/`, `api/`
-3. **Crypto market ingestion pipeline** (Binance/CoinGecko + Spark/dbt/Airflow) — `ingestion/crypto/`
+A production-minded, end-to-end data platform that transforms raw structured
+and unstructured data into reliable, ML-ready datasets. It combines automated
+ETL, quality gates, warehouse modeling, analytics, machine-learning workflows,
+and a unified FastAPI service in one reproducible project.
+
+**Built with:** Python, Pandas, NumPy, SQL, SQLite, PostgreSQL, MySQL,
+FastAPI, scikit-learn, Airflow, dbt, Spark, Docker, and GitHub Actions.
 
 النسخة العربية: [`README.ar.md`](README.ar.md). Full change history:
 [`CHANGELOG.md`](CHANGELOG.md).
 
-> **Data note:** the e-commerce dataset (`data/raw/*.csv`) is synthetic
-> demo data, not real transactions. Every score, forecast, and segment
-> here demonstrates the pipeline, not a real business result.
+> **Data note:** the e-commerce dataset (`data/raw/*.csv`) is synthetic demo
+> data. It is included to make the pipeline reproducible; forecasts, segments,
+> and scores are demonstrations rather than business claims.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A[CSV and JSON sources] --> B[Extract and transform]
+    B --> C{Data quality gate}
+    C -->|Pass| D[(Star-schema warehouse)]
+    C -->|Fail| E[Quality history and remediation]
+    D --> F[EDA and SQL analytics]
+    D --> G[ML: forecast, segments, anomalies, recommendations]
+    D --> H[FastAPI]
+    I[Crypto APIs] --> J[Airflow / Spark / dbt pipeline]
+    J --> C
+```
+
+## What this project demonstrates
+
+- **Reliable ETL:** extract, clean, validate, score, and load data through one
+  command: `python3 run_all.py`.
+- **Data quality by design:** table-level scoring, threshold-based load
+  blocking, remediation, audit trails, and historical quality monitoring.
+- **Data engineering foundations:** star-schema warehouse, SQL analysis, and
+  migration paths for PostgreSQL and MySQL.
+- **AI/ML readiness:** forecasting, segmentation, anomaly detection,
+  recommendations, and sentiment analysis for JSON reviews.
+- **Operational thinking:** FastAPI endpoints, orchestration artifacts,
+  Docker-based crypto stack, and automated CI.
 
 Tested on Ubuntu 24.04, Python 3.12, MySQL 8.0.46, and PostgreSQL 16
 (all installed directly via `apt`, not Docker). Docker itself, and live
@@ -113,7 +148,7 @@ Actions itself would run them still need Docker or GitHub's own runners
 to verify — not available here. Pushing this to GitHub and watching
 Actions run is the next real check beyond what was reproducible locally.
 
-## What's new here versus the three original projects
+## Platform capabilities
 
 1. **A real DQ gate inside the ETL** (`dq/quality_gate.py` +
    `etl/pipeline.py`). The DQ engine used to be a separate tool. Now every

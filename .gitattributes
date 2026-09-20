@@ -1,0 +1,6 @@
+# Demo inputs and generated visual outputs are versioned for reproducibility,
+# but should not dominate GitHub's language statistics.
+data/raw/*.csv linguist-generated
+data/raw/*.json linguist-generated
+outputs/* linguist-generated
+notebooks/*.ipynb linguist-documentation
