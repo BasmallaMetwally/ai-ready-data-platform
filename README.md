@@ -77,20 +77,31 @@ use a dedicated development database only.
 # SQLite (default)
 python3 run_all.py --skip-ml --target sqlite
 
-# PostgreSQL
+# PostgreSQL (DATABASE_URL is the primary configuration path)
 pip install -r etl/requirements-db.txt
-python3 run_all.py --skip-ml --target postgres \
-  --database-url 'postgresql://user:password@localhost:5432/ecommerce_dw'
+export DATABASE_URL='postgresql://user:password@localhost:5432/ecommerce_dw'
+python3 run_all.py --skip-ml --target postgres
 
 # MySQL 8+
 pip install -r etl/requirements-db.txt
-python3 run_all.py --skip-ml --target mysql \
-  --database-url 'mysql://user:password@localhost:3306/ecommerce_dw'
+export DATABASE_URL='mysql://user:password@localhost:3306/ecommerce_dw'
+python3 run_all.py --skip-ml --target mysql
 ```
 
 The same flags work with `python3 etl/pipeline.py`. PostgreSQL and MySQL
 schemas live in [postgres_migration](postgres_migration/) and
 [mysql_migration](mysql_migration/).
+
+## Example output
+
+The latest reproducible e-commerce pipeline run produced these DQ-gate scores
+(threshold: 80/100):
+
+| Warehouse table | DQ score | Result |
+| --- | ---: | --- |
+| `dim_customer` | 100.0 | pass |
+| `dim_product` | 92.7 | pass |
+| `fact_sales` | 92.0 | pass |
 
 ## Validate locally
 

@@ -58,11 +58,11 @@ drivers الاختيارية وحدد قاعدة بيانات تجريبية؛ �
 ```bash
 pip install -r etl/requirements-db.txt
 
-python3 run_all.py --skip-ml --target postgres \
-  --database-url 'postgresql://user:password@localhost:5432/ecommerce_dw'
+export DATABASE_URL='postgresql://user:password@localhost:5432/ecommerce_dw'
+python3 run_all.py --skip-ml --target postgres
 
-python3 run_all.py --skip-ml --target mysql \
-  --database-url 'mysql://user:password@localhost:3306/ecommerce_dw'
+export DATABASE_URL='mysql://user:password@localhost:3306/ecommerce_dw'
+python3 run_all.py --skip-ml --target mysql
 ```
 
 ## الاختبارات

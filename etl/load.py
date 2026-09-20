@@ -99,8 +99,18 @@ def apply_schema(conn: Any, target: str) -> None:
     elif target == "mysql":
         cursor = conn.cursor()
         try:
-            for _ in cursor.execute(schema, multi=True):
-                pass
+            # mysql-connector's multi-statement API differs across releases.
+            # The schema has no stored routines, so executing its individual
+            # statements is portable and makes this CI target deterministic.
+            statements = [
+                statement.strip()
+                for statement in "\n".join(
+                    line for line in schema.splitlines() if not line.strip().startswith("--")
+                ).split(";")
+                if statement.strip()
+            ]
+            for statement in statements:
+                cursor.execute(statement)
         finally:
             cursor.close()
     else:

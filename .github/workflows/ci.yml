@@ -49,6 +49,47 @@ jobs:
           print('API smoke test passed')
           "
 
+  ecommerce-database-targets:
+    name: E-commerce ETL — PostgreSQL and MySQL targets
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: etl
+          POSTGRES_PASSWORD: testing
+          POSTGRES_DB: ecommerce_dw
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_USER: etl
+          MYSQL_PASSWORD: testing
+          MYSQL_DATABASE: ecommerce_dw
+          MYSQL_ROOT_PASSWORD: root_testing
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd "mysqladmin ping -h localhost -proot_testing"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: pip install -r requirements.txt -r etl/requirements-db.txt
+      - name: Load the PostgreSQL warehouse
+        env:
+          DATABASE_URL: postgresql://etl:testing@localhost:5432/ecommerce_dw
+        run: python3 etl/pipeline.py --target postgres
+      - name: Load the MySQL warehouse
+        env:
+          DATABASE_URL: mysql://etl:testing@localhost:3306/ecommerce_dw
+        run: python3 etl/pipeline.py --target mysql
+
   crypto-lint-and-test:
     name: Crypto pipeline — lint & unit tests
     runs-on: ubuntu-latest
