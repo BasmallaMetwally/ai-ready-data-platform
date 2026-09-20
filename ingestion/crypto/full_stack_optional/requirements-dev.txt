@@ -1,0 +1,21 @@
+-r requirements.txt
+
+pytest==8.3.3
+pytest-cov==5.0.0
+responses==0.25.3
+ruff==0.6.9
+mypy==1.11.2
+types-requests==2.32.0.20240914
+sqlfluff==3.2.0
+sqlfluff-templater-dbt==3.2.0
+
+# ---------------------------------------------------- integration test suite
+# Without these three, test_lake.py, test_spark_silver.py and
+# test_warehouse_integration.py all skip via importorskip/skipif, coverage
+# drops from ~89% back to ~63%, and `--cov-fail-under=70` fails in CI even
+# though it passes locally. They must be installed wherever the full suite is
+# expected to run — see the `test` job in ci.yml for the accompanying Postgres
+# service container and Java setup pyspark needs.
+pyspark==3.5.1
+moto[server]==5.2.3
+psycopg[binary]==3.2.3

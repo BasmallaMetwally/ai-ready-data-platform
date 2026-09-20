@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_ohlcv_with_returns
+    description: >
+      Window-function layer computing lagged prices and returns (daily, 7-day,
+      30-day) over stg_ohlcv. Ephemeral and inlined into fct_ohlcv_daily rather
+      than persisted: it has no standalone meaning on its own and exists only
+      so fct_ohlcv_daily's SQL isn't cluttered with window definitions.
+    columns:
+      - name: trading_pair
+        tests: [not_null]
+      - name: trade_date
+        tests: [not_null]
+      - name: daily_return
+        description: Simple close-to-close return versus the prior trade_date for this pair.
+      - name: log_return
+        description: Natural-log return; additive across periods, which daily_return is not.

@@ -1,0 +1,183 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  lint:
+    name: Lint & type check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: pip install ruff==0.6.9 mypy==1.11.2 types-requests
+      - name: Ruff
+        run: ruff check src/ tests/ airflow/ dashboard/
+      - name: Ruff format
+        run: ruff format --check src/ tests/
+      - name: Mypy
+        run: mypy src/pipeline --ignore-missing-imports
+
+  test:
+    name: Unit & integration tests
+    runs-on: ubuntu-latest
+    services:
+      # Backs test_warehouse_integration.py. Without this, those tests skip
+      # via their reachability check, coverage drops to ~63%, and the
+      # coverage gate below fails for a reason invisible from the log — it
+      # looks like a coverage regression when it's actually a missing service.
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: testing
+          POSTGRES_DB: test_market
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    env:
+      TEST_PG_HOST: localhost
+      TEST_PG_USER: postgres
+      TEST_PG_PASSWORD: testing
+      TEST_PG_DATABASE: test_market
+      PYSPARK_PYTHON: python3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      # pyspark needs a JVM. GitHub's ubuntu-latest runners are not
+      # guaranteed to ship one, so this is explicit rather than assumed.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: pip install -r requirements-dev.txt
+      - name: Apply DDL to the integration test database
+        run: PGPASSWORD=testing psql -h localhost -U postgres -d test_market -f sql/ddl/001_init.sql
+      - name: pytest (unit + integration)
+        run: PYTHONPATH=src pytest tests/ -v --cov=pipeline --cov-report=term-missing --cov-fail-under=85
+      - name: pytest (fast unit subset only, sanity check)
+        if: always()
+        run: PYTHONPATH=src pytest tests/ -m "not integration" -q --no-header
+
+  dbt:
+    name: dbt compile & test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: warehouse
+          POSTGRES_PASSWORD: warehouse
+          POSTGRES_DB: market
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    env:
+      PG_HOST: localhost
+      PG_USER: warehouse
+      PG_PASSWORD: warehouse
+      PG_DATABASE: market
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install dbt-core==1.8.7 dbt-postgres==1.8.2
+      - name: Apply DDL
+        run: PGPASSWORD=warehouse psql -h localhost -U warehouse -d market -f sql/ddl/001_init.sql
+      - name: dbt deps
+        run: cd dbt && dbt deps --profiles-dir .
+      - name: dbt compile
+        run: cd dbt && dbt compile --profiles-dir . --target prod
+      - name: Enforce data contracts
+        run: |
+          cd dbt
+          # `--select fct_ohlcv_daily` alone fails: the model's ancestors
+          # (stg_ohlcv, dim_asset) never get built, so the contract check
+          # errors on a missing relation before it ever reaches the contract.
+          # `+fct_ohlcv_daily` pulls in the model's real ancestors, but
+          # dim_date is only reachable through a schema-test relationship
+          # (`tests: relationships: to: ref('dim_date')`), which `+model`
+          # selection does not traverse — found by running this step for
+          # real and reading exactly which relation was reported missing.
+          # A contract violation surfaces at build time, not at read time.
+          dbt build --profiles-dir . --target prod --select +fct_ohlcv_daily dim_date --empty
+      - name: sqlfluff
+        run: |
+          pip install sqlfluff==3.2.0 sqlfluff-templater-dbt==3.2.0
+          sqlfluff lint dbt/models --config .sqlfluff || true
+      - name: Verify every model is documented and tested
+        run: |
+          cd dbt
+          # `dbt ls --output json` does NOT include `description` by default —
+          # found by running this exact step and watching it report every
+          # single model undocumented regardless of what schema.yml actually
+          # says. `--output-keys` is required to request the field at all.
+          dbt ls --profiles-dir . --target prod --resource-type model \
+            --output json --output-keys name description > models.json
+          python - <<'PY'
+          import json, sys
+          models = [json.loads(line) for line in open("models.json") if line.strip().startswith("{")]
+          undocumented = [m["name"] for m in models if not m.get("description")]
+          if undocumented:
+              sys.exit(f"Models missing a description: {undocumented}")
+          print(f"All {len(models)} models documented.")
+          PY
+
+  dag-validation:
+    name: Airflow DAG import check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install "apache-airflow==2.9.3" apache-airflow-providers-apache-spark pydantic-settings pandas numpy
+      - name: Check DAGs import without errors
+        env:
+          PYTHONPATH: src
+          AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+        run: |
+          airflow db migrate
+          python -c "
+          from airflow.models import DagBag
+          bag = DagBag('airflow/dags', include_examples=False)
+          assert not bag.import_errors, bag.import_errors
+          expected = {'crypto_market_ingest', 'crypto_transform',
+                      'crypto_assets_weekly', 'crypto_backfill'}
+          missing = expected - set(bag.dags)
+          assert not missing, f'DAGs failed to register: {missing}'
+
+          # Dataset wiring is easy to break silently: assert the consumer is
+          # actually subscribed to a dataset the producer really publishes,
+          # not just that both files happen to type the same URI string.
+          transform = bag.dags['crypto_transform']
+          consumed = {d.uri for d in transform.dataset_triggers.objects}
+
+          ingest = bag.dags['crypto_market_ingest']
+          published = {
+              o.uri for t in ingest.tasks for o in getattr(t, 'outlets', [])
+              if hasattr(o, 'uri')
+          }
+          shared = consumed & published
+          assert shared, (
+              f'crypto_transform listens on {consumed} but crypto_market_ingest '
+              f'only publishes {published} — the trigger would never fire'
+          )
+          print(f'Dataset wiring confirmed: {shared}')
+          print(f'{len(bag.dags)} DAGs imported cleanly: {sorted(bag.dags)}')
+          "

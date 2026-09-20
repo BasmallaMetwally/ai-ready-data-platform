@@ -1,0 +1,509 @@
+customer_id,name,age,email,signup_date,order_amount,country,order_start,order_end
+1,Sara Hassan,56.0,sara.hassan1@example.com,2023-10-09,417.46,UAE,2023-10-16,2023-10-19
+2,Sara Ali,25.0,sara.ali2@example.com,2024-08-27,577.31,Jordan,2024-08-28,2024-08-29
+3,Sara Fathy,38.0,sara.fathy3@example.com,2023-08-27,464.88,Qatar,2023-09-15,2023-09-16
+4,Tarek Fathy,28.0,tarek.fathy4@example.com,2024-10-27,464.88,Qatar,2024-11-09,2024-11-13
+5,Yara Sami,28.0,yara.sami5@example.com,2023-01-07,541.86,UAE,2023-01-29,2023-02-05
+6,Mona Sami,41.0,mona.sami6@example.com,2023-06-09,651.58,UAE,2023-07-09,2023-07-15
+7,Sara Ali,20.0,sara.ali7@example.com,2024-01-25,429.58,Egypt,2024-02-05,2024-02-11
+8,Dina Sami,38.0,dina.sami8@example.com,2023-02-14,581.38,Jordan,2023-03-03,2023-03-05
+9,Khaled Ali,50.0,khaled.ali9@example.com,2024-07-19,536.29,Saudi Arabia,2024-08-14,2024-08-24
+10,Mona Fathy,61.0,mona.fathy10@example.com,2023-03-13,213.01,Egypt,2023-04-03,2023-04-07
+11,Omar Ali,42.0,omar.ali11@example.com,2023-08-27,622.47,Egypt,2023-09-08,2023-09-13
+12,Yara Adel,59.0,yara.adel12@example.com,2023-06-16,271.42,Saudi Arabia,2023-06-27,2023-07-01
+13,Omar Ali,45.0,omar.ali13@example.com,2024-09-15,533.31,UAE,2024-10-02,2024-10-06
+14,Mohamed Kamal,61.0,mohamed.kamal14@example.com,2024-01-24,384.8,Saudi Arabia,2024-02-22,2024-03-02
+15,Nour Adel,69.0,nour.adel15@example.com,2023-02-27,418.34,UAE,2023-03-25,2023-03-26
+16,Mona Nasser,68.0,mona.nasser16@example.com,2023-10-02,516.64,Egypt,2023-10-08,2023-10-18
+17,Mona Fathy,24.0,mona.fathy17@example.com,2024-11-02,409.96,Jordan,2024-11-14,2024-11-22
+18,Mohamed Sami,19.0,mohamed.sami18@example.com,2023-05-23,642.12,UAE,2023-06-15,2023-06-24
+19,Tarek Sami,37.0,,2024-08-21,616.88,Jordan,2024-09-18,2024-09-28
+20,Khaled Adel,61.0,khaled.adel20@example.com,2023-08-13,334.84,UAE,2023-08-29,2023-09-06
+21,Sara Hassan,-5,sara.hassan21@example.com,2023-04-23,623.38,UAE,2023-05-13,2023-05-16
+22,Khaled Ali,19.0,khaled.ali22@example.com,2024-01-30,316.87,Jordan,2024-02-18,2024-02-26
+23,Tarek Sami,23.0,tarek.sami23@example.com,2024-07-20,548.45,Egypt,2024-08-10,2024-08-12
+24,Tarek Sami,46.0,tarek.sami24@example.com,2024-10-18,290.99,Saudi Arabia,2024-10-21,2024-10-26
+25,Khaled Ibrahim,35.0,khaled.ibrahim25@example.com,2024-04-09,532.8,Egypt,2024-05-09,2024-05-14
+26,Tarek Ibrahim,65.0,tarek.ibrahim26@example.com,2024-06-03,632.26,Egypt,2024-06-30,2024-07-05
+27,Tarek Fathy,32.0,tarek.fathy27@example.com,2023-06-06,482.65,Saudi Arabia,2023-06-30,2023-07-03
+28,Tarek Hassan,33.0,tarek.hassan28@example.com,2024-09-05,454.83,Saudi Arabia,2024-09-20,2024-09-21
+29,Sara Adel,62.0,sara.adel29@example.com,2023-11-11,616.06,UAE,2023-11-12,2023-11-16
+30,Dina Ali,43.0,dina.ali30@example.com,2023-03-29,419.28,Jordan,2023-04-24,2023-04-26
+31,Tarek Ibrahim,42.0,tarek.ibrahim31@example.com,2023-05-12,551.54,Jordan,2023-06-11,2023-06-20
+32,Mohamed Sami,58.0,mohamed.sami32@example.com,2024-06-24,235.54,Qatar,2024-07-07,2024-07-11
+33,Tarek Fathy,46.0,tarek.fathy33@example.com,2023-11-16,587.32,Jordan,2023-12-07,2023-12-13
+34,Yara Kamal,52.0,abc.com,2023-05-04,633.16,UAE,2023-05-11,2023-05-13
+35,Mona Hassan,52.0,mona.hassan35@example.com,2024-08-25,374.12,Qatar,2024-09-01,2024-09-11
+36,Nour Hassan,24.0,nour.hassan36@example.com,2023-03-14,453.62,Egypt,2023-03-21,2023-03-23
+37,Ahmed Adel,26.0,ahmed.adel37@example.com,2023-03-14,273.78,Qatar,2023-03-21,2023-03-26
+38,Yara Fathy,65.0,yara.fathy38@example.com,2024-07-06,664.95,UAE,2024-07-29,2024-08-08
+39,Dina Kamal,40.0,dina.kamal39@example.com,2023-09-06,681.83,Jordan,2023-10-01,2023-10-08
+40,Nour Ali,61.0,nour.ali40@example.com,2023-04-10,-200.0,Jordan,2023-04-21,2023-04-28
+41,Khaled Kamal,57.0,khaled.kamal41@example.com,2023-02-25,568.68,Egypt,2023-02-26,2023-03-05
+42,Mona Ali,52.0,mona.ali42@example.com,2023-09-12,247.36,UAE,2023-09-18,2023-09-27
+43,Yara Ibrahim,54.0,yara.ibrahim43@example.com,2024-03-08,359.94,UAE,2024-03-16,2024-03-24
+44,Nour Ali,31.0,nour.ali44@example.com,2024-03-29,617.63,Qatar,2024-04-01,2024-04-02
+45,Tarek Hassan,56.0,tarek.hassan45@example.com,2023-04-06,477.42,UAE,2023-04-11,2023-04-18
+46,Yara Kamal,68.0,yara.kamal46@example.com,2023-08-07,355.17,Jordan,2023-09-04,2023-09-05
+47,Mohamed Nasser,49.0,mohamed.nasser47@example.com,2023-01-03,287.19,Jordan,2023-01-11,2023-01-19
+48,Omar Nasser,49.0,omar.nasser48@example.com,2024-07-23,656.37,Jordan,2024-07-27,2024-07-31
+49,Omar Fathy,21.0,omar.fathy49@example.com,2023-03-01,467.05,Qatar,2023-03-24,2023-04-02
+50,Ahmed Adel,62.0,ahmed.adel50@example.com,2023-02-28,553.57,Egypt,2023-03-18,2023-03-26
+51,Tarek Ibrahim,32.0,tarek.ibrahim51@example.com,2023-02-28,381.61,Qatar,2023-03-02,2023-03-05
+52,Sara Ali,49.0,sara.ali52@example.com,2024-11-22,611.56,UAE,2024-12-04,2024-12-06
+53,Dina Fathy,24.0,dina.fathy53@example.com,2024-08-15,378.73,Qatar,2024-08-16,2024-08-26
+54,Sara Nasser,19.0,sara.nasser54@example.com,2024-11-04,424.74,Qatar,2024-11-22,2024-12-01
+55,Mona Sami,59.0,mona.sami55@example.com,2023-07-29,575.22,Saudi Arabia,2023-08-05,2023-08-10
+56,Khaled Ibrahim,23.0,khaled.ibrahim56@example.com,2024-11-18,673.73,Saudi Arabia,2024-12-02,2024-12-08
+57,Sara Hassan,45.0,sara.hassan57@example.com,2024-04-14,420.54,Qatar,2024-05-02,2024-05-04
+58,Sara Fathy,47.0,sara.fathy58@example.com,2024-06-02,576.99,Saudi Arabia,2024-06-06,2024-06-12
+59,Sara Fathy,28.0,sara.fathy59@example.com,2024-01-14,383.89,Saudi Arabia,2024-01-19,2024-01-27
+60,Tarek Sami,42.0,tarek.sami60@example.com,2024-09-18,446.03,Qatar,2024-09-18,2024-09-27
+61,Omar Ali,56.0,omar.ali61@example.com,2023-05-18,461.27,Saudi Arabia,2023-05-21,2023-05-23
+62,Tarek Ibrahim,44.0,tarek.ibrahim62@example.com,2023-10-06,569.14,Saudi Arabia,2023-10-25,2023-10-29
+63,Mona Fathy,69.0,mona.fathy63@example.com,2024-10-11,297.59,Saudi Arabia,2024-10-27,2024-11-04
+64,Omar Hassan,23.0,omar.hassan64@example.com,2023-04-05,347.14,Jordan,2023-05-01,2023-05-06
+65,Ahmed Hassan,25.0,ahmed.hassan65@example.com,2023-12-08,303.51,UAE,2023-12-28,2024-01-02
+66,Mohamed Kamal,thirty,mohamed.kamal66@example.com,2024-07-18,941.55,Jordan,2024-08-04,2024-08-05
+67,Sara Ali,68.0,sara.ali67@example.com,2023-06-02,363.95,Qatar,2023-06-03,2023-06-09
+68,Dina Ibrahim,49.0,dina.ibrahim68@example.com,2024-03-16,377.4,UAE,2024-03-17,2024-03-22
+69,Mona Hassan,49.0,mona.hassan69@example.com,2024-01-02,186.26,UAE,2024-01-23,2024-01-27
+70,Sara Adel,66.0,sara.adel70@example.com,2024-07-27,689.56,Jordan,2024-08-15,2024-08-18
+71,Nour Ibrahim,69.0,nour.ibrahim71@example.com,2023-07-01,622.68,Jordan,2023-07-01,2023-07-04
+72,Mona Nasser,20.0,mona.nasser72@example.com,2024-11-16,341.81,UAE,2024-11-24,2024-11-27
+73,Sara Nasser,66.0,sara.nasser73@example.com,2023-02-09,433.74,Jordan,2023-02-16,2023-02-20
+74,Yara Adel,49.0,yara.adel74@example.com,2023-11-09,487.38,UAE,2023-11-16,2023-11-17
+75,Nour Nasser,50.0,nour.nasser75@example.com,2023-12-03,715.03,Saudi Arabia,2023-12-30,2024-01-01
+76,Omar Adel,61.0,omar.adel76@example.com,2024-10-18,659.87,Qatar,2024-10-30,2024-11-08
+77,Mona Hassan,43.0,mona.hassan77@example.com,2023-04-29,671.42,Saudi Arabia,2023-05-04,2023-05-14
+78,Omar Hassan,34.0,omar.hassan78@example.com,2023-04-22,612.79,Qatar,2023-05-05,2023-05-11
+79,Mona Nasser,,mona.nasser79@example.com,2024-09-12,710.42,Qatar,2024-09-15,2024-09-22
+80,Dina Fathy,23.0,dina.fathy80@example.com,2023-09-18,289.72,Egypt,2023-10-10,2023-10-17
+81,Ahmed Fathy,39.0,ahmed.fathy81@example.com,2024-01-08,367.9,Jordan,2024-01-10,2024-01-16
+82,Dina Adel,50.0,dina.adel82@example.com,2024-11-10,511.53,Egypt,2024-12-03,2024-12-08
+83,Tarek Sami,26.0,,2024-11-13,351.42,Jordan,2024-11-23,2024-11-30
+84,Omar Ibrahim,46.0,omar.ibrahim84@example.com,2023-07-16,415.06,Jordan,2023-08-06,2023-08-13
+85,Mohamed Sami,20.0,mohamed.sami85@example.com,2024-02-20,755.99,Qatar,2024-03-17,2024-03-18
+86,Omar Sami,36.0,omar.sami86@example.com,2023-08-04,631.04,Jordan,2023-08-29,2023-09-08
+87,Dina Adel,43.0,dina.adel87@example.com,2024-04-21,267.4,Jordan,2024-05-05,2024-05-09
+88,Tarek Kamal,49.0,tarek.kamal88@example.com,2023-06-23,510.28,Egypt,2023-07-02,2023-07-11
+89,Dina Adel,24.0,dina.adel89@example.com,2023-04-06,580.45,UAE,2023-04-27,2023-05-02
+90,Nour Fathy,56.0,nour.fathy90@example.com,2023-05-31,362.8,Egypt,2023-06-01,2023-06-05
+91,Yara Ali,35.0,yara.ali91@example.com,2024-04-11,572.3,Jordan,2024-05-09,2024-05-19
+92,Nour Nasser,42.0,nour.nasser92@example.com,2024-05-21,638.97,Jordan,2024-05-28,2024-05-31
+93,Ahmed Ali,67.0,ahmed.ali93@example.com,2024-03-11,622.03,UAE,2024-03-16,2024-03-25
+94,Yara Hassan,43.0,yara.hassan94@example.com,2024-07-24,315.37,UAE,2024-08-22,2024-08-24
+95,Yara Ibrahim,65.0,,2024-04-20,15000.0,Qatar,2024-05-07,2024-05-17
+96,Mona Kamal,19.0,mona.kamal96@example.com,2024-09-19,880.87,Qatar,2024-10-02,2024-10-11
+97,Yara Ibrahim,18.0,yara.ibrahim97@example.com,2024-05-01,538.98,Jordan,2024-05-09,2024-05-13
+98,Omar Kamal,26.0,omar.kamal98@example.com,2024-10-03,617.27,UAE,2024-10-11,2024-10-19
+99,Sara Sami,58.0,sara.sami99@example.com,2023-08-29,694.91,Saudi Arabia,2023-09-08,2023-09-14
+100,Tarek Ali,20.0,tarek.ali100@example.com,2023-05-22,369.93,UAE,2023-05-29,2023-06-05
+101,Mohamed Fathy,37.0,mohamed.fathy101@example.com,2023-03-07,537.57,Jordan,2023-03-20,2023-03-26
+102,Tarek Kamal,41.0,tarek.kamal102@example.com,2024-03-01,551.97,Egypt,2024-03-07,2024-03-14
+103,Khaled Hassan,69.0,khaled.hassan103@example.com,2024-08-12,533.94,Jordan,2024-08-27,2024-08-28
+104,Mona Sami,52.0,mona.sami104@example.com,2024-02-04,627.11,Jordan,2024-02-21,2024-03-01
+105,Dina Fathy,65.0,dina.fathy105@example.com,2024-05-14,543.96,UAE,2024-05-22,2024-05-29
+106,Yara Hassan,46.0,yara.hassan106@example.com,2024-02-03,392.85,Saudi Arabia,2024-02-24,2024-03-02
+107,Mohamed Kamal,35.0,mohamed.kamal107@example.com,2023-05-11,526.22,Qatar,2023-05-28,2023-05-29
+108,Khaled Hassan,52.0,khaled.hassan108@example.com,2023-03-27,317.47,Jordan,2023-03-31,2023-04-08
+109,Mohamed Hassan,,mohamed.hassan109@example.com,2023-09-24,499.27,Jordan,2023-10-04,2023-10-08
+110,Yara Adel,65.0,yara.adel110@example.com,2023-12-12,442.5,Jordan,2023-12-20,2023-12-27
+111,Omar Ali,37.0,omar.ali111@example.com,2024-04-26,701.48,Egypt,2024-05-19,2024-05-28
+112,Ahmed Adel,,ahmed.adel112@example.com,2023-08-18,389.82,Egypt,2023-09-11,2023-09-12
+113,Ahmed Fathy,34.0,ahmed.fathy113@example.com,2023-07-24,562.72,Egypt,2023-08-12,2023-08-15
+114,Nour Ibrahim,68.0,nour.ibrahim114@example.com,2024-04-29,217.02,Egypt,2024-05-17,2024-05-21
+115,Yara Sami,39.0,yara.sami115@example.com,2024-01-13,366.57,UAE,2024-02-01,2024-02-11
+116,Sara Ibrahim,55.0,sara.ibrahim116@example.com,2023-11-15,377.63,Egypt,2023-12-03,2023-12-04
+117,Omar Nasser,55.0,omar.nasser117@example.com,2024-02-11,631.8,UAE,2024-02-13,2024-02-23
+118,Nour Ali,44.0,nour.ali118@example.com,2023-11-05,464.06,Qatar,2023-11-30,2023-12-02
+119,Dina Hassan,44.0,dina.hassan119@example.com,2023-12-22,501.95,Qatar,2024-01-04,2024-01-10
+120,Sara Adel,45.0,sara.adel120@example.com,2023-01-13,718.03,Jordan,2023-02-08,2023-02-16
+121,Sara Nasser,64.0,sara.nasser121@example.com,2024-01-06,289.04,Jordan,2024-01-28,2024-01-31
+122,Khaled Ibrahim,65.0,khaled.ibrahim122@example.com,2024-06-18,494.82,Saudi Arabia,2024-07-07,2024-07-16
+123,Yara Kamal,36.0,yara.kamal123@example.com,2024-03-22,721.98,Qatar,2024-03-30,2024-04-05
+124,Nour Ali,34.0,nour.ali124@example.com,2023-10-13,559.52,Jordan,2023-10-20,2023-10-28
+125,Dina Nasser,61.0,dina.nasser125@example.com,2023-12-11,466.48,Egypt,2023-12-26,2024-01-01
+126,Mohamed Kamal,58.0,mohamed.kamal126@example.com,2023-08-06,607.1,Saudi Arabia,2023-08-31,2023-09-05
+127,Mona Sami,54.0,mona.sami127@example.com,2024-09-02,481.38,Saudi Arabia,2024-09-19,2024-09-20
+128,Tarek Fathy,48.0,,2023-03-29,611.05,UAE,2023-04-21,2023-04-28
+129,Yara Fathy,52.0,yara.fathy129@example.com,2024-05-02,357.57,Jordan,2024-05-16,2024-05-17
+130,Sara Sami,50.0,sara.sami130@example.com,2023-08-15,410.47,Jordan,2023-09-06,2023-09-10
+131,Omar Adel,20.0,omar.adel131@example.com,2024-04-29,532.11,Qatar,2024-05-15,2024-05-21
+132,Khaled Adel,48.0,khaled.adel132@example.com,2023-12-27,313.14,Jordan,2024-01-04,2024-01-09
+133,Omar Fathy,20.0,omar.fathy133@example.com,2023-05-04,367.42,UAE,2023-05-14,2023-05-16
+134,Tarek Ibrahim,49.0,tarek.ibrahim134@example.com,2023-07-16,523.06,UAE,2023-08-08,2023-08-16
+135,Omar Sami,64.0,user@@x.com,2023-04-13,658.61,UAE,2023-04-22,2023-04-26
+136,Mona Ibrahim,34.0,,2023-11-06,507.7,Egypt,2023-11-28,2023-12-07
+137,Mohamed Sami,57.0,mohamed.sami137@example.com,2023-02-16,662.46,Egypt,2023-03-05,2023-03-10
+138,Mohamed Kamal,65.0,mohamed.kamal138@example.com,2023-04-16,658.07,Egypt,2023-05-04,2023-05-09
+139,Yara Kamal,,yara.kamal139@example.com,2024-03-27,635.77,Saudi Arabia,2024-04-01,2024-04-02
+140,Omar Kamal,,omar.kamal140@example.com,2023-04-27,409.41,Egypt,2023-05-09,2023-05-17
+141,Sara Hassan,67.0,sara.hassan141@example.com,2023-06-05,577.26,UAE,2023-06-30,2023-07-10
+142,Omar Ali,62.0,omar.ali142@example.com,2023-09-12,1077.91,Egypt,2023-09-29,2023-10-06
+143,Dina Fathy,37.0,dina.fathy143@example.com,2024-06-19,699.63,Jordan,2024-07-03,2024-07-11
+144,Omar Nasser,33.0,omar.nasser144@example.com,2023-11-09,648.23,Qatar,2023-11-28,2023-11-29
+145,Dina Ali,31.0,dina.ali145@example.com,2023-08-01,452.71,UAE,2023-08-09,2023-08-11
+146,Mohamed Fathy,45.0,mohamed.fathy146@example.com,2023-06-27,613.85,Qatar,2023-06-29,2023-07-02
+147,Ahmed Nasser,51.0,ahmed.nasser147@example.com,2024-04-06,524.75,Qatar,2024-04-21,2024-04-26
+148,Ahmed Fathy,39.0,ahmed.fathy148@example.com,2023-10-23,371.61,Saudi Arabia,2023-11-14,2023-11-22
+149,Sara Fathy,68.0,sara.fathy149@example.com,2023-09-28,847.2,Qatar,2023-10-19,2023-10-23
+150,Khaled Ali,39.0,khaled.ali150@example.com,2024-07-11,219.91,UAE,2024-07-31,2024-08-03
+151,Omar Ibrahim,39.0,omar.ibrahim151@example.com,2023-03-15,553.16,Egypt,2023-03-20,2023-03-25
+152,Dina Sami,54.0,dina.sami152@example.com,2024-03-25,217.95,Egypt,2024-04-08,2024-04-13
+153,Khaled Sami,50.0,khaled.sami153@example.com,2024-05-27,418.81,Qatar,2024-06-11,2024-06-19
+154,Sara Hassan,61.0,sara.hassan154@example.com,2024-03-18,616.52,Saudi Arabia,2024-04-06,2024-04-11
+155,Ahmed Ali,22.0,ahmed.ali155@example.com,2023-08-23,681.56,Qatar,2023-09-10,2023-09-11
+156,Omar Hassan,49.0,omar.hassan156@example.com,2023-06-29,477.31,Jordan,2023-07-15,2023-07-23
+157,Omar Ibrahim,69.0,omar.ibrahim157@example.com,2024-08-22,749.57,Jordan,2024-09-11,2024-09-19
+158,Sara Kamal,57.0,sara.kamal158@example.com,2023-12-23,389.11,Jordan,2024-01-02,2024-01-08
+159,Sara Ibrahim,69.0,sara.ibrahim159@example.com,2023-12-04,303.81,Jordan,2023-12-26,2024-01-03
+160,Omar Nasser,43.0,omar.nasser160@example.com,2024-07-17,201.41,Egypt,2024-07-31,2024-08-02
+161,Mona Sami,54.0,mona.sami161@example.com,2023-11-28,767.19,Egypt,2023-12-22,2023-12-29
+162,Tarek Hassan,18.0,,2024-11-04,398.39,,2024-11-18,2024-11-25
+163,Ahmed Fathy,18.0,ahmed.fathy163@example.com,2024-06-14,267.68,Saudi Arabia,2024-07-03,2024-07-11
+164,Yara Hassan,65.0,yara.hassan164@example.com,2023-07-28,448.53,Saudi Arabia,2023-08-14,2023-08-17
+165,Omar Kamal,42.0,omar.kamal165@example.com,2024-05-11,310.87,Egypt,2024-05-11,2024-05-21
+166,Nour Ibrahim,33.0,nour.ibrahim166@example.com,2023-11-15,637.68,Qatar,2023-11-15,2023-11-24
+167,Khaled Ali,56.0,khaled.ali167@example.com,2023-08-19,381.86,Egypt,2023-09-02,2023-09-04
+168,Mohamed Kamal,46.0,mohamed.kamal168@example.com,2023-10-26,788.54,Qatar,2023-11-17,2023-11-22
+169,Khaled Kamal,20.0,khaled.kamal169@example.com,2024-04-28,390.39,UAE,2024-05-12,2024-05-21
+170,Mohamed Nasser,54.0,mohamed.nasser170@example.com,2023-07-15,308.01,Qatar,2023-07-31,2023-08-03
+171,Sara Sami,39.0,sara.sami171@example.com,2024-02-29,566.57,,2024-03-29,2024-04-07
+172,Omar Hassan,29.0,omar.hassan172@example.com,2023-10-17,616.2,Saudi Arabia,2023-11-12,2023-11-22
+173,Dina Kamal,33.0,dina.kamal173@example.com,2023-06-02,497.08,Jordan,2023-06-19,2023-06-27
+174,Mona Adel,56.0,mona.adel174@example.com,2024-07-19,360.11,Qatar,2024-07-31,2024-08-08
+175,Mona Fathy,53.0,mona.fathy175@example.com,2023-09-02,462.11,Qatar,2023-09-14,2023-09-18
+176,Khaled Hassan,40.0,khaled.hassan176@example.com,2023-11-22,312.83,Jordan,2023-12-14,2023-12-21
+177,Khaled Ibrahim,27.0,khaled.ibrahim177@example.com,2024-05-22,500.27,Egypt,2024-05-26,2024-06-04
+178,Dina Adel,22.0,dina.adel178@example.com,2023-04-13,613.39,Jordan,2023-04-16,2023-04-25
+179,Yara Hassan,62.0,,2023-05-28,469.63,Jordan,2023-06-24,2023-06-27
+180,Sara Kamal,49.0,sara.kamal180@example.com,2023-09-29,509.13,Saudi Arabia,2023-10-18,2023-10-25
+181,Sara Adel,44.0,sara.adel181@example.com,2024-11-21,591.18,Qatar,2024-12-03,2024-12-09
+182,Yara Hassan,52.0,yara.hassan182@example.com,2024-09-24,654.88,Egypt,2024-10-01,2024-10-06
+183,Nour Ali,50.0,nour.ali183@example.com,2024-03-20,819.96,Egypt,2024-04-13,2024-04-10
+184,Yara Ibrahim,54.0,yara.ibrahim184@example.com,2023-11-03,207.19,,2023-11-04,2023-11-10
+185,Ahmed Sami,29.0,ahmed.sami185@example.com,2024-01-03,565.9,Saudi Arabia,2024-01-16,2024-01-19
+186,Nour Nasser,27.0,nour.nasser186@example.com,2024-08-02,483.73,UAE,2024-08-07,2024-08-10
+187,Sara Nasser,60.0,sara.nasser187@example.com,2024-09-26,542.15,UAE,2024-10-11,2024-10-21
+188,Mohamed Fathy,34.0,mohamed.fathy188@example.com,2024-04-17,406.6,Saudi Arabia,2024-05-01,2024-05-06
+189,Ahmed Kamal,43.0,,2023-10-22,632.75,Qatar,2023-10-27,2023-10-29
+190,Yara Adel,43.0,yara.adel190@example.com,2024-08-24,430.32,Saudi Arabia,2024-09-13,2024-09-20
+191,Omar Kamal,51.0,omar.kamal191@example.com,2023-11-06,495.74,UAE,2023-11-18,2023-11-26
+192,Sara Fathy,67.0,,2024-01-26,242.54,Qatar,2024-02-06,2024-02-16
+193,Omar Sami,62.0,omar.sami193@example.com,2023-01-23,567.3,Jordan,2023-01-31,2023-02-01
+194,Dina Hassan,53.0,dina.hassan194@example.com,2024-09-12,488.19,Jordan,2024-10-08,2024-10-13
+195,Nour Adel,27.0,nour.adel195@example.com,2023-08-13,751.75,UAE,2023-09-01,2023-09-06
+196,Mohamed Ali,52.0,mohamed.ali196@example.com,2024-10-04,218.83,Egypt,2024-10-13,2024-10-21
+197,Ahmed Adel,66.0,ahmed.adel197@example.com,2023-05-15,407.71,Egypt,2023-06-13,2023-06-18
+198,Mona Nasser,66.0,mona.nasser198@example.com,2023-06-29,557.42,UAE,2023-07-03,2023-07-12
+199,Mona Sami,56.0,mona.sami199@example.com,2023-06-18,656.55,Saudi Arabia,2023-07-17,2023-07-25
+200,Omar Adel,49.0,plainaddress,2023-04-28,534.35,Jordan,2023-05-28,2023-05-30
+201,Mohamed Fathy,54.0,mohamed.fathy201@example.com,2024-11-23,614.67,Jordan,2024-12-23,2025-01-01
+202,Mona Ali,40.0,mona.ali202@example.com,2024-02-09,333.33,Egypt,2024-02-17,2024-02-26
+203,Sara Kamal,42.0,sara.kamal203@example.com,2024-01-13,405.97,Saudi Arabia,2024-01-31,2024-02-07
+204,Mona Ali,66.0,mona.ali204@example.com,2024-11-22,298.7,UAE,2024-12-07,2024-12-08
+205,Dina Adel,37.0,dina.adel205@example.com,2024-09-16,421.52,UAE,2024-10-06,2024-10-08
+206,Yara Sami,36.0,yara.sami206@example.com,2024-10-26,642.37,Jordan,2024-10-29,2024-11-01
+207,Ahmed Hassan,66.0,ahmed.hassan207@example.com,2023-11-08,438.31,Jordan,2023-11-11,2023-11-13
+208,Nour Ibrahim,45.0,nour.ibrahim208@example.com,2024-02-02,647.6,Jordan,2024-02-13,2024-02-22
+209,Khaled Ibrahim,,khaled.ibrahim209@example.com,2024-02-29,469.97,Egypt,2024-03-26,2024-04-03
+210,Dina Nasser,64.0,dina.nasser210@example.com,2023-10-14,803.71,Egypt,2023-11-05,2023-11-11
+211,Nour Kamal,33.0,nour.kamal211@example.com,2024-03-31,231.19,UAE,2024-04-27,2024-05-03
+212,Sara Adel,42.0,sara.adel212@example.com,2024-07-11,432.98,,2024-07-12,2024-07-19
+213,Omar Fathy,69.0,omar.fathy213@example.com,2023-05-06,673.72,Jordan,2023-05-08,2023-05-12
+214,Dina Hassan,40.0,,2023-02-21,618.75,Saudi Arabia,2023-02-28,2023-03-03
+215,Dina Fathy,33.0,dina.fathy215@example.com,2023-03-12,395.13,Qatar,2023-03-18,2023-03-28
+216,Nour Fathy,48.0,nour.fathy216@example.com,2023-12-03,498.68,UAE,2023-12-28,2024-01-07
+217,Ahmed Sami,22.0,ahmed.sami217@example.com,2023-05-29,548.68,UAE,2023-06-15,2023-06-20
+218,Mohamed Ali,28.0,mohamed.ali218@example.com,2024-11-07,751.29,Egypt,2024-11-11,2024-11-12
+219,Mona Fathy,35.0,mona.fathy219@example.com,2024-08-25,513.51,Saudi Arabia,2024-08-25,2024-08-28
+220,Omar Hassan,55.0,omar.hassan220@example.com,2023-05-10,512.41,Jordan,2023-05-26,2023-05-28
+221,Sara Kamal,24.0,sara.kamal221@example.com,2024-04-04,284.08,Saudi Arabia,2024-04-20,2024-04-30
+222,Sara Kamal,26.0,sara.kamal222@example.com,2024-05-30,442.48,UAE,2024-06-29,2024-07-09
+223,Ahmed Sami,67.0,ahmed.sami223@example.com,2024-04-14,262.75,Egypt,2024-04-15,2024-04-23
+224,Khaled Nasser,25.0,khaled.nasser224@example.com,2023-04-21,511.85,Jordan,2023-05-13,2023-05-21
+225,Sara Ali,65.0,sara.ali225@example.com,2023-11-26,543.48,Qatar,2023-11-30,2023-12-02
+226,Mohamed Sami,62.0,mohamed.sami226@example.com,2024-10-01,471.92,Qatar,2024-10-18,2024-10-24
+227,Khaled Sami,21.0,khaled.sami227@example.com,2024-04-09,698.98,Qatar,2024-04-28,2024-05-05
+228,Sara Ali,36.0,sara.ali228@example.com,2024-11-01,356.84,Qatar,2024-11-24,2024-11-28
+229,Khaled Kamal,61.0,khaled.kamal229@example.com,2023-08-22,194.44,Jordan,2023-09-01,2023-09-09
+230,Khaled Nasser,43.0,khaled.nasser230@example.com,2023-04-08,735.5,Saudi Arabia,2023-04-21,2023-04-27
+231,Omar Adel,36.0,omar.adel231@example.com,2023-06-06,497.15,Jordan,2023-06-08,2023-06-10
+232,Sara Ali,30.0,sara.ali232@example.com,2024-03-18,349.62,Egypt,2024-04-10,2024-04-16
+233,Mohamed Hassan,67.0,mohamed.hassan233@example.com,2024-08-23,397.65,Qatar,2024-09-09,2024-09-15
+234,Sara Nasser,45.0,sara.nasser234@example.com,2023-12-29,492.77,Jordan,2024-01-25,2024-01-26
+235,Omar Sami,25.0,omar.sami235@example.com,2023-12-27,548.41,Egypt,2024-01-14,2024-01-23
+236,Nour Ibrahim,18.0,nour.ibrahim236@example.com,2024-11-03,375.92,Jordan,2024-11-10,2024-11-12
+237,Mona Adel,20.0,mona.adel237@example.com,2023-04-28,573.9,Saudi Arabia,2023-05-16,2023-05-20
+238,Khaled Hassan,66.0,khaled.hassan238@example.com,2024-09-15,513.33,Saudi Arabia,2024-09-15,2024-09-18
+239,Omar Sami,42.0,omar.sami239@example.com,2023-12-14,448.52,Saudi Arabia,2023-12-14,2023-12-17
+240,Mohamed Nasser,23.0,mohamed.nasser240@example.com,2023-03-13,568.65,UAE,2023-04-05,2023-04-06
+241,Sara Fathy,61.0,sara.fathy241@example.com,2024-01-21,506.84,Jordan,2024-02-04,2024-02-10
+242,Mohamed Adel,64.0,mohamed.adel242@example.com,2023-11-16,558.38,Saudi Arabia,2023-12-10,2023-12-20
+243,Dina Ali,38.0,dina.ali243@example.com,2023-02-23,474.79,UAE,2023-02-28,2023-03-10
+244,Ahmed Ali,36.0,ahmed.ali244@example.com,2023-10-06,542.78,Jordan,2023-10-27,2023-11-03
+245,Yara Kamal,37.0,yara.kamal245@example.com,2024-02-29,394.73,Saudi Arabia,2024-03-06,2024-03-15
+246,Sara Adel,18.0,sara.adel246@example.com,2024-03-16,354.93,Egypt,2024-03-25,2024-04-04
+247,Yara Sami,20.0,yara.sami247@example.com,2023-02-16,483.36,UAE,2023-02-28,2023-03-10
+248,Ahmed Hassan,45.0,,2023-07-29,12000.0,Saudi Arabia,2023-08-28,2023-09-01
+249,Mohamed Sami,25.0,mohamed.sami249@example.com,2023-10-24,569.41,Saudi Arabia,2023-10-27,2023-10-28
+250,Yara Nasser,25.0,yara.nasser250@example.com,2023-06-29,343.87,UAE,2023-07-11,2023-07-20
+251,Nour Adel,67.0,nour.adel251@example.com,2023-03-15,380.26,Jordan,2023-04-11,2023-04-12
+252,Khaled Hassan,53.0,khaled.hassan252@example.com,2024-04-15,299.32,Egypt,2024-05-12,2024-05-18
+253,Dina Nasser,44.0,dina.nasser253@example.com,2024-08-10,551.26,Jordan,2024-09-01,2024-09-08
+254,Omar Ali,50.0,omar.ali254@example.com,2024-02-19,781.43,Egypt,2024-03-20,2024-03-26
+255,Mohamed Kamal,37.0,mohamed.kamal255@example.com,2024-01-06,272.81,Egypt,2024-01-19,2024-01-21
+256,Nour Nasser,30.0,nour.nasser256@example.com,2024-08-26,601.95,Jordan,2024-09-11,2024-09-13
+257,Khaled Sami,63.0,,2023-12-14,752.7,UAE,2023-12-24,2023-12-27
+258,Sara Ali,42.0,sara.ali258@example.com,2024-06-27,240.45,Qatar,2024-07-03,2024-07-09
+259,Mona Ibrahim,19.0,mona.ibrahim259@example.com,2023-08-30,315.24,Egypt,2023-09-03,2023-09-08
+260,Nour Ibrahim,50.0,nour.ibrahim260@example.com,2024-09-08,528.44,UAE,2024-10-02,2024-10-04
+261,Mohamed Kamal,18.0,mohamed.kamal261@example.com,2024-04-20,551.09,Qatar,2024-05-14,2024-05-24
+262,Yara Adel,28.0,yara.adel262@example.com,2024-10-04,497.93,Saudi Arabia,2024-10-08,2024-10-16
+263,Sara Kamal,38.0,sara.kamal263@example.com,2024-03-28,407.63,Saudi Arabia,2024-04-22,2024-04-27
+264,Dina Hassan,44.0,dina.hassan264@example.com,2023-12-27,715.43,Qatar,2023-12-29,2024-01-03
+265,Yara Kamal,66.0,yara.kamal265@example.com,2023-02-08,482.82,Egypt,2023-02-19,2023-02-24
+266,Sara Ali,52.0,sara.ali266@example.com,2024-09-21,685.67,Qatar,2024-10-07,2024-10-14
+267,Yara Hassan,18.0,yara.hassan267@example.com,2024-04-05,551.37,Qatar,2024-04-25,2024-04-29
+268,Mona Kamal,22.0,mona.kamal268@example.com,2024-05-28,786.73,UAE,2024-06-27,2024-06-28
+269,Yara Ali,55.0,yara.ali269@example.com,2023-12-18,524.96,Egypt,2024-01-03,2024-01-06
+270,Ahmed Fathy,54.0,ahmed.fathy270@example.com,2024-03-24,621.13,Jordan,2024-04-09,2024-04-18
+271,Dina Ibrahim,27.0,dina.ibrahim271@example.com,2024-01-08,432.49,,2024-02-06,2024-02-11
+272,Khaled Nasser,31.0,khaled.nasser272@example.com,2023-12-13,593.43,Qatar,2023-12-14,2023-12-20
+273,Sara Adel,26.0,sara.adel273@example.com,2023-04-07,294.71,Qatar,2023-04-28,2023-05-05
+274,Omar Sami,66.0,omar.sami274@example.com,2024-11-03,580.32,Qatar,2024-11-30,2024-12-03
+275,Mona Ali,57.0,mona.ali275@example.com,2024-08-19,269.88,UAE,2024-09-17,2024-09-23
+276,Omar Nasser,25.0,,2023-05-13,691.65,Qatar,2023-06-04,2023-06-01
+277,Omar Nasser,56.0,omar.nasser277@example.com,2024-10-20,536.35,Saudi Arabia,2024-11-15,2024-11-18
+278,Tarek Ali,20.0,tarek.ali278@example.com,2024-10-23,807.11,Jordan,2024-11-08,2024-11-14
+279,Ahmed Adel,67.0,ahmed.adel279@example.com,2023-11-13,525.5,UAE,2023-12-13,2023-12-17
+280,Mona Kamal,22.0,mona.kamal280@example.com,2023-07-16,672.99,UAE,2023-07-20,2023-07-23
+281,Sara Sami,47.0,sara.sami281@example.com,2023-04-14,462.66,Qatar,2023-05-08,2023-05-17
+282,Tarek Hassan,65.0,tarek.hassan282@example.com,2024-11-08,645.74,Saudi Arabia,2024-12-06,2024-12-16
+283,Mohamed Nasser,,mohamed.nasser283@example.com,2023-06-07,709.52,UAE,2023-06-12,2023-06-22
+284,Mohamed Kamal,31.0,mohamed.kamal284@example.com,2023-02-14,441.51,Jordan,2023-02-25,2023-03-01
+285,Yara Sami,19.0,yara.sami285@example.com,2024-04-04,530.47,UAE,2024-04-21,2024-04-25
+286,Omar Kamal,67.0,omar.kamal286@example.com,2023-07-18,507.44,Saudi Arabia,2023-08-08,2023-08-18
+287,Yara Kamal,51.0,yara.kamal287@example.com,2023-10-16,623.5,Jordan,2023-11-01,2023-11-10
+288,Khaled Ibrahim,68.0,khaled.ibrahim288@example.com,2023-07-24,807.87,Qatar,2023-07-28,2023-08-02
+289,Ahmed Kamal,51.0,ahmed.kamal289@example.com,2024-01-16,530.02,Qatar,2024-02-14,2024-02-16
+290,Tarek Ali,41.0,tarek.ali290@example.com,2023-10-19,174.37,Egypt,2023-11-12,2023-11-15
+291,Omar Kamal,32.0,omar.kamal291@example.com,2024-06-09,744.29,UAE,2024-07-05,2024-07-12
+292,Sara Fathy,68.0,sara.fathy292@example.com,2024-04-06,292.98,Saudi Arabia,2024-05-05,2024-05-06
+293,Khaled Hassan,34.0,khaled.hassan293@example.com,2024-02-10,497.79,Qatar,2024-02-21,2024-02-25
+294,Khaled Ali,37.0,khaled.ali294@example.com,2024-01-19,619.46,UAE,2024-01-19,2024-01-25
+295,Sara Adel,41.0,sara.adel295@example.com,2023-05-30,519.21,UAE,2023-05-31,2023-06-05
+296,Yara Ibrahim,19.0,yara.ibrahim296@example.com,2024-04-25,427.8,Jordan,2024-05-14,2024-05-15
+297,Sara Hassan,30.0,sara.hassan297@example.com,2023-09-20,556.34,UAE,2023-10-16,2023-10-19
+298,Tarek Nasser,28.0,tarek.nasser298@example.com,2023-04-24,294.26,Saudi Arabia,2023-05-01,2023-05-06
+299,Sara Hassan,68.0,sara.hassan299@example.com,2023-09-02,9999.0,Jordan,2023-09-22,2023-10-02
+95,Yara Ali,33.0,yara.ali300@example.com,2023-04-24,804.82,Jordan,2023-05-13,2023-05-22
+301,Ahmed Fathy,48.0,ahmed.fathy301@example.com,2023-05-28,741.77,Saudi Arabia,2023-06-10,2023-06-11
+302,Dina Adel,21.0,dina.adel302@example.com,2023-09-04,378.06,Qatar,2023-09-17,2023-09-14
+303,Sara Adel,57.0,sara.adel303@example.com,2023-03-11,387.13,Qatar,2023-03-28,2023-04-06
+304,Tarek Hassan,49.0,tarek.hassan304@example.com,2024-02-04,751.06,Jordan,2024-02-05,2024-02-12
+305,Mona Sami,20.0,mona.sami305@example.com,2023-01-17,570.17,Saudi Arabia,2023-02-11,2023-02-13
+306,Mona Fathy,68.0,mona.fathy306@example.com,2024-11-03,502.26,Egypt,2024-11-27,2024-12-07
+307,Mona Ibrahim,36.0,mona.ibrahim307@example.com,2023-02-15,424.51,Saudi Arabia,2023-03-04,2023-03-10
+308,Mohamed Kamal,59.0,mohamed.kamal308@example.com,2024-05-05,656.8,UAE,2024-05-30,2024-06-02
+309,Sara Kamal,39.0,sara.kamal309@example.com,2023-02-07,284.89,Saudi Arabia,2023-02-13,2023-02-14
+310,Nour Hassan,51.0,nour.hassan310@example.com,2023-11-20,471.27,Saudi Arabia,2023-12-06,2023-12-13
+311,Tarek Kamal,66.0,tarek.kamal311@example.com,2023-09-17,794.71,Egypt,2023-10-11,2023-10-15
+312,Omar Adel,26.0,omar.adel312@example.com,2023-02-18,505.29,Saudi Arabia,2023-02-26,2023-02-28
+313,Mona Nasser,43.0,mona.nasser313@example.com,2024-02-14,577.19,Jordan,2024-03-13,2024-03-20
+314,Mona Ibrahim,64.0,mona.ibrahim314@example.com,2024-05-23,680.7,Jordan,2024-06-03,2024-06-12
+315,Omar Ali,47.0,omar.ali315@example.com,2024-03-10,443.14,Egypt,2024-03-23,2024-04-02
+316,Mohamed Sami,34.0,mohamed.sami316@example.com,2023-11-25,341.06,Egypt,2023-11-27,2023-12-03
+317,Omar Sami,43.0,omar.sami317@example.com,2024-04-01,526.72,Qatar,2024-04-23,2024-04-30
+318,Mohamed Kamal,64.0,mohamed.kamal318@example.com,2023-12-26,505.35,Jordan,2023-12-27,2024-01-02
+319,Dina Nasser,39.0,dina.nasser319@example.com,2023-10-09,615.31,Egypt,2023-10-11,2023-10-18
+320,Mona Ibrahim,31.0,mona.ibrahim320@example.com,2023-02-01,382.95,UAE,2023-02-28,2023-03-10
+321,Yara Hassan,41.0,yara.hassan321@example.com,2023-05-10,462.06,Egypt,2023-05-17,2023-05-23
+322,Mona Nasser,68.0,mona.nasser322@example.com,2024-08-03,519.12,Egypt,2024-08-22,2024-08-25
+323,Yara Adel,,yara.adel323@example.com,2024-01-16,630.03,Jordan,2024-02-09,2024-02-11
+324,Dina Ibrahim,60.0,dina.ibrahim324@example.com,2024-06-26,570.66,Saudi Arabia,2024-07-08,2024-07-14
+325,Omar Fathy,64.0,omar.fathy325@example.com,2023-04-27,324.53,Egypt,2023-05-20,2023-05-23
+326,Yara Nasser,42.0,yara.nasser326@example.com,2024-07-29,251.14,Egypt,2024-08-06,2024-08-11
+327,Yara Fathy,54.0,yara.fathy327@example.com,2024-09-18,538.99,Saudi Arabia,2024-10-10,2024-10-18
+328,Nour Ali,34.0,nour.ali328@example.com,2023-05-19,306.34,Egypt,2023-06-02,2023-06-05
+329,Yara Ali,56.0,,2024-11-29,511.29,Saudi Arabia,2024-12-20,2024-12-26
+330,Sara Sami,42.0,sara.sami330@example.com,2023-11-04,368.75,UAE,2023-11-26,2023-11-29
+331,Mona Fathy,34.0,mona.fathy331@example.com,2023-05-05,447.53,UAE,2023-05-30,2023-06-02
+332,Nour Kamal,27.0,nour.kamal332@example.com,2023-01-27,183.4,Saudi Arabia,2023-02-13,2023-02-23
+333,Mona Kamal,20.0,,2024-07-18,455.28,UAE,2024-08-06,2024-08-08
+334,Sara Sami,53.0,sara.sami334@example.com,2024-02-12,825.93,Jordan,2024-02-28,2024-03-06
+335,Khaled Ali,64.0,khaled.ali335@example.com,2023-05-09,560.23,Saudi Arabia,2023-05-29,2023-05-31
+336,Yara Kamal,57.0,,2024-11-27,747.04,Qatar,2024-12-08,2024-12-11
+337,Tarek Ibrahim,66.0,tarek.ibrahim337@example.com,2023-05-13,198.86,Jordan,2023-05-29,2023-05-30
+338,Sara Ibrahim,54.0,sara.ibrahim338@example.com,2023-11-08,660.12,UAE,2023-11-13,2023-11-19
+95,Nour Adel,23.0,nour.adel339@example.com,2024-06-15,533.9,Saudi Arabia,2024-07-12,2024-07-14
+340,Omar Fathy,62.0,omar.fathy340@example.com,2024-10-12,625.96,Qatar,2024-10-20,2024-10-23
+341,Omar Ali,23.0,omar.ali341@example.com,2024-05-29,290.21,UAE,2024-06-16,2024-06-26
+342,Mohamed Ibrahim,39.0,mohamed.ibrahim342@example.com,2024-11-05,584.45,Qatar,2024-11-28,2024-12-08
+343,Mona Hassan,38.0,mona.hassan343@example.com,2023-01-30,431.28,,2023-01-31,2023-02-10
+344,Omar Fathy,21.0,omar.fathy344@example.com,2024-08-08,406.1,Jordan,2024-08-27,2024-08-28
+345,Yara Sami,47.0,yara.sami345@example.com,2024-10-19,411.14,Saudi Arabia,2024-11-03,2024-11-07
+346,Khaled Sami,48.0,khaled.sami346@example.com,2024-04-09,370.4,Egypt,2024-05-01,2024-05-02
+347,Mohamed Kamal,41.0,mohamed.kamal347@example.com,2024-03-01,124.59,Jordan,2024-03-15,2024-03-19
+348,Mona Ibrahim,53.0,not-an-email,2023-11-17,602.7,Saudi Arabia,2023-12-10,2023-12-16
+349,Khaled Ibrahim,41.0,khaled.ibrahim349@example.com,2024-01-15,464.16,Qatar,2024-02-01,2024-02-03
+350,Mona Fathy,45.0,mona.fathy350@example.com,2024-04-22,363.87,Egypt,2024-04-30,2024-05-08
+351,Nour Ibrahim,28.0,nour.ibrahim351@example.com,2023-04-10,535.6,Egypt,2023-04-19,2023-04-26
+352,Dina Nasser,66.0,dina.nasser352@example.com,2023-09-12,541.04,UAE,2023-10-08,2023-10-14
+95,Dina Adel,47.0,dina.adel353@example.com,2023-07-14,575.14,UAE,2023-07-29,2023-08-07
+354,Yara Kamal,19.0,yara.kamal354@example.com,2023-11-12,353.37,Jordan,2023-11-12,2023-11-14
+355,Khaled Kamal,32.0,khaled.kamal355@example.com,2023-09-04,238.08,UAE,2023-09-22,2023-09-28
+356,Ahmed Hassan,62.0,ahmed.hassan356@example.com,2023-10-16,892.5,Jordan,2023-11-04,2023-11-12
+357,Omar Hassan,61.0,omar.hassan357@example.com,2023-04-21,363.55,Jordan,2023-04-25,2023-04-30
+358,Mona Nasser,37.0,mona.nasser358@example.com,2024-01-10,595.79,Egypt,2024-01-22,2024-01-23
+359,Dina Fathy,66.0,dina.fathy359@example.com,2024-01-07,777.05,Qatar,2024-01-16,2024-01-18
+360,Khaled Kamal,31.0,khaled.kamal360@example.com,2024-07-17,539.89,,2024-08-12,2024-08-22
+361,Dina Ali,55.0,dina.ali361@example.com,2023-05-12,329.13,Egypt,2023-05-24,2023-05-30
+362,Mona Adel,53.0,mona.adel362@example.com,2023-05-28,540.16,UAE,2023-06-16,2023-06-25
+363,Khaled Hassan,30.0,khaled.hassan363@example.com,2023-02-16,402.22,,2023-02-20,2023-02-26
+364,Yara Kamal,67.0,yara.kamal364@example.com,2023-06-02,507.11,Qatar,2023-06-30,2023-07-09
+365,Mohamed Adel,27.0,mohamed.adel365@example.com,2024-09-19,799.55,Saudi Arabia,2024-09-24,2024-10-01
+366,Dina Sami,19.0,dina.sami366@example.com,2024-08-30,797.6,Saudi Arabia,2024-09-15,2024-09-24
+367,Tarek Kamal,30.0,tarek.kamal367@example.com,2024-07-30,412.61,Saudi Arabia,2024-08-14,2024-08-15
+368,Mona Adel,54.0,mona.adel368@example.com,2024-11-20,539.14,Egypt,2024-12-03,2024-12-13
+369,Omar Hassan,26.0,omar.hassan369@example.com,2024-09-03,579.47,Jordan,2024-09-11,2024-09-21
+370,Dina Fathy,41.0,dina.fathy370@example.com,2023-02-22,716.24,Qatar,2023-03-09,2023-03-12
+371,Tarek Nasser,55.0,tarek.nasser371@example.com,2023-06-01,234.46,UAE,2023-06-02,2023-06-12
+372,Sara Fathy,66.0,sara.fathy372@example.com,2023-01-20,345.11,Jordan,2023-01-30,2023-01-27
+373,Mohamed Nasser,22.0,mohamed.nasser373@example.com,2023-07-28,555.67,Jordan,2023-08-13,2023-08-23
+374,Yara Hassan,26.0,yara.hassan374@example.com,2023-05-22,409.4,Qatar,2023-05-28,2023-06-06
+375,Mona Kamal,51.0,,2024-06-22,573.21,Jordan,2024-07-02,2024-07-05
+376,Yara Adel,46.0,yara.adel376@example.com,2024-07-13,737.02,Saudi Arabia,2024-08-03,2024-07-31
+377,Dina Kamal,25.0,,2023-07-16,579.79,UAE,2023-07-24,2023-08-02
+378,Omar Fathy,47.0,omar.fathy378@example.com,2023-11-01,604.45,Saudi Arabia,2023-11-23,2023-11-27
+379,Yara Adel,52.0,yara.adel379@example.com,2024-05-06,559.17,Saudi Arabia,2024-05-23,2024-05-28
+380,Omar Ali,31.0,,2024-08-10,436.85,Qatar,2024-08-22,2024-08-29
+381,Mona Ibrahim,43.0,mona.ibrahim381@example.com,2023-10-25,458.89,Egypt,2023-11-03,2023-11-05
+382,Mona Kamal,59.0,mona.kamal382@example.com,2024-11-02,591.22,Saudi Arabia,2024-11-25,2024-11-22
+383,Nour Fathy,42.0,nour.fathy383@example.com,2024-07-05,8800.0,Saudi Arabia,2024-08-03,2024-08-12
+384,Omar Ibrahim,,,2023-04-22,786.05,Qatar,2023-05-15,2023-05-25
+385,Nour Fathy,31.0,nour.fathy385@example.com,2023-02-21,537.53,Qatar,2023-02-28,2023-03-04
+386,Ahmed Ali,50.0,ahmed.ali386@example.com,2024-02-28,620.86,Saudi Arabia,2024-03-21,2024-03-29
+387,Sara Ibrahim,,sara.ibrahim387@example.com,2023-01-06,799.71,Qatar,2023-02-04,2023-02-07
+388,Khaled Kamal,34.0,khaled.kamal388@example.com,2024-05-03,263.07,UAE,2024-05-27,2024-06-01
+389,Mona Sami,50.0,mona.sami389@example.com,2024-10-23,603.02,Egypt,2024-11-21,2024-11-23
+390,Dina Fathy,57.0,dina.fathy390@example.com,2024-07-01,149.06,Egypt,2024-07-30,2024-08-02
+391,Khaled Ibrahim,57.0,khaled.ibrahim391@example.com,2023-02-07,367.28,Jordan,2023-03-04,2023-03-12
+392,Mohamed Sami,23.0,mohamed.sami392@example.com,2023-02-08,543.04,Egypt,2023-02-17,2023-02-27
+393,Dina Ali,20.0,dina.ali393@example.com,2023-12-10,278.21,Saudi Arabia,2023-12-24,2024-01-02
+394,Tarek Kamal,69.0,test@,2023-05-18,671.56,Qatar,2023-06-01,2023-06-06
+395,Nour Ali,32.0,nour.ali395@example.com,2023-12-05,498.09,UAE,2023-12-28,2024-01-05
+396,Omar Ibrahim,47.0,omar.ibrahim396@example.com,2023-01-15,658.16,Saudi Arabia,2023-02-09,2023-02-14
+397,Dina Fathy,56.0,dina.fathy397@example.com,2023-06-29,624.22,Qatar,2023-07-26,2023-08-02
+398,Khaled Adel,44.0,khaled.adel398@example.com,2023-03-30,651.48,Jordan,2023-04-20,2023-04-22
+399,Mohamed Ibrahim,50.0,mohamed.ibrahim399@example.com,2024-05-03,510.73,Saudi Arabia,2024-06-01,2024-06-05
+400,Ahmed Sami,27.0,,2024-01-28,428.35,UAE,2024-02-11,2024-02-16
+401,Mona Sami,unknown,mona.sami401@example.com,2024-08-19,447.87,Qatar,2024-08-19,2024-08-24
+402,Mona Fathy,55.0,mona.fathy402@example.com,2023-03-05,624.37,Egypt,2023-03-19,2023-03-24
+403,Mohamed Nasser,30.0,mohamed.nasser403@example.com,2024-05-29,459.52,Saudi Arabia,2024-06-20,2024-06-22
+404,Omar Adel,46.0,omar.adel404@example.com,2024-09-21,353.19,UAE,2024-09-28,2024-10-01
+405,Yara Ibrahim,25.0,yara.ibrahim405@example.com,2024-04-10,435.89,Qatar,2024-04-21,2024-04-28
+406,Tarek Kamal,29.0,hello world@x.com,2024-07-04,417.1,UAE,2024-07-28,2024-08-01
+407,Dina Ali,62.0,dina.ali407@example.com,2024-06-22,630.44,Jordan,2024-07-08,2024-07-14
+408,Sara Ali,,sara.ali408@example.com,2023-03-05,703.35,Qatar,2023-04-02,2023-04-11
+409,Nour Ibrahim,53.0,nour.ibrahim409@example.com,2023-06-18,255.17,Saudi Arabia,2023-07-15,2023-07-24
+410,Yara Ali,22.0,yara.ali410@example.com,2024-11-27,542.14,UAE,2024-12-19,2024-12-29
+411,Yara Ali,37.0,yara.ali411@example.com,2024-06-06,233.19,Jordan,2024-07-01,2024-07-02
+412,Yara Ibrahim,64.0,yara.ibrahim412@example.com,2024-06-09,724.41,Jordan,2024-06-23,2024-07-03
+413,Ahmed Kamal,43.0,ahmed.kamal413@example.com,2024-11-19,527.08,Saudi Arabia,2024-12-12,2024-12-13
+414,Khaled Sami,42.0,khaled.sami414@example.com,2023-01-04,896.54,UAE,2023-01-22,2023-01-24
+415,Ahmed Nasser,50.0,ahmed.nasser415@example.com,2023-12-19,516.41,Egypt,2024-01-05,2024-01-06
+416,Sara Kamal,,sara.kamal416@example.com,2023-02-02,608.86,Saudi Arabia,2023-02-15,2023-02-18
+417,Mohamed Nasser,22.0,@missinguser.com,2024-01-19,532.53,Jordan,2024-02-02,2024-02-09
+418,Khaled Ali,59.0,khaled.ali418@example.com,2024-11-30,566.32,Qatar,2024-12-04,2024-12-10
+419,Sara Ibrahim,66.0,sara.ibrahim419@example.com,2024-07-04,782.3,Jordan,2024-07-20,2024-07-23
+420,Nour Hassan,68.0,nour.hassan420@example.com,2023-01-24,701.81,Saudi Arabia,2023-02-07,2023-02-16
+421,Khaled Nasser,46.0,,2023-08-24,405.89,UAE,2023-09-07,2023-09-13
+422,Mohamed Sami,53.0,mohamed.sami422@example.com,2023-07-13,425.69,Egypt,2023-07-14,2023-07-21
+423,Dina Hassan,40.0,dina.hassan423@example.com,2023-09-04,880.8,UAE,2023-09-06,2023-09-08
+424,Dina Hassan,38.0,dina.hassan424@example.com,2024-04-02,578.59,Qatar,2024-04-23,2024-04-24
+425,Nour Hassan,64.0,nour.hassan425@example.com,2024-02-16,476.3,Jordan,2024-02-23,2024-03-03
+426,Nour Hassan,,nour.hassan426@example.com,2023-05-24,435.97,Qatar,2023-06-02,2023-06-06
+427,Dina Adel,43.0,dina.adel427@example.com,2024-08-14,348.18,Qatar,2024-09-07,2024-09-13
+428,Nour Sami,42.0,nour.sami428@example.com,2023-05-27,251.77,Qatar,2023-06-03,2023-06-10
+429,Omar Sami,43.0,omar.sami429@example.com,2023-03-04,465.52,Qatar,2023-04-03,2023-04-13
+430,Mohamed Nasser,35.0,,2024-07-23,594.22,Jordan,2024-07-24,2024-07-30
+431,Khaled Adel,44.0,khaled.adel431@example.com,2024-03-02,449.63,Jordan,2024-03-06,2024-03-11
+432,Khaled Ibrahim,60.0,khaled.ibrahim432@example.com,2024-07-04,750.35,Jordan,2024-07-11,2024-07-15
+433,Omar Ibrahim,61.0,omar.ibrahim433@example.com,2024-04-19,471.36,Egypt,2024-05-06,2024-05-13
+434,Khaled Ibrahim,,khaled.ibrahim434@example.com,2024-02-02,546.95,,2024-02-10,2024-02-14
+435,Mona Ali,24.0,mona.ali435@example.com,2024-04-05,655.82,Saudi Arabia,2024-04-07,2024-04-16
+436,Nour Hassan,60.0,nour.hassan436@example.com,2023-10-02,395.27,Jordan,2023-10-23,2023-11-02
+437,Dina Hassan,39.0,dina.hassan437@example.com,2023-03-16,399.13,UAE,2023-04-10,2023-04-20
+438,Tarek Fathy,66.0,tarek.fathy438@example.com,2024-05-05,401.73,UAE,2024-06-01,2024-06-07
+439,Omar Hassan,24.0,omar.hassan439@example.com,2023-08-05,494.44,UAE,2023-09-04,2023-09-06
+440,Yara Fathy,37.0,yara.fathy440@example.com,2024-09-10,564.42,UAE,2024-09-22,2024-09-26
+441,Tarek Adel,39.0,tarek.adel441@example.com,2023-10-17,886.0,Jordan,2023-10-31,2023-11-09
+442,Mona Sami,30.0,mona.sami442@example.com,2023-09-25,508.88,Saudi Arabia,2023-10-11,2023-10-19
+443,Yara Ali,47.0,yara.ali443@example.com,2024-04-25,382.62,Saudi Arabia,2024-05-24,2024-05-28
+444,Mona Adel,36.0,mona.adel444@example.com,2024-02-28,601.14,,2024-03-17,2024-03-21
+445,Mohamed Hassan,49.0,mohamed.hassan445@example.com,2023-09-25,838.47,Qatar,2023-10-24,2023-11-03
+446,Dina Nasser,46.0,dina.nasser446@example.com,2023-10-30,413.96,UAE,2023-11-05,2023-11-11
+447,Nour Nasser,47.0,nour.nasser447@example.com,2024-08-06,545.47,UAE,2024-08-21,2024-08-30
+448,Mona Sami,200,mona.sami448@example.com,2024-05-15,674.98,Jordan,2024-05-29,2024-06-01
+449,Mona Ibrahim,31.0,mona.ibrahim449@example.com,2023-05-24,535.22,Qatar,2023-06-08,2023-06-05
+450,Tarek Hassan,45.0,tarek.hassan450@example.com,2024-06-20,772.7,Egypt,2024-07-16,2024-07-18
+451,Ahmed Hassan,66.0,ahmed.hassan451@example.com,2024-02-27,686.91,UAE,2024-03-24,2024-03-28
+452,Sara Ibrahim,21.0,,2023-01-10,188.99,UAE,2023-01-26,2023-02-03
+453,Mona Hassan,18.0,,2024-09-24,414.84,Qatar,2024-10-23,2024-10-31
+454,Yara Hassan,20.0,yara.hassan454@example.com,2023-01-07,466.77,Qatar,2023-01-24,2023-01-31
+455,Ahmed Hassan,49.0,ahmed.hassan455@example.com,2024-06-26,577.07,Saudi Arabia,2024-07-13,2024-07-18
+456,Ahmed Nasser,51.0,ahmed.nasser456@example.com,2023-07-03,455.85,Egypt,2023-08-01,2023-08-03
+457,Tarek Ibrahim,50.0,tarek.ibrahim457@example.com,2023-09-04,640.35,UAE,2023-09-23,2023-10-02
+95,Omar Adel,18.0,omar.adel458@example.com,2023-10-01,690.73,Jordan,2023-10-03,2023-10-09
+459,Khaled Kamal,20.0,khaled.kamal459@example.com,2024-08-01,-500.0,UAE,2024-08-23,2024-08-27
+460,Omar Ali,25.0,omar.ali460@example.com,2024-10-31,330.64,Egypt,2024-11-02,2024-11-09
+461,Khaled Nasser,64.0,khaled.nasser461@example.com,2024-07-19,644.42,Jordan,2024-07-20,2024-07-21
+462,Mohamed Ali,45.0,mohamed.ali462@example.com,2024-05-26,525.88,Jordan,2024-06-15,2024-06-21
+463,Dina Ali,64.0,dina.ali463@example.com,2024-06-24,629.29,Egypt,2024-07-01,2024-07-05
+464,Dina Kamal,41.0,dina.kamal464@example.com,2023-10-05,593.51,Egypt,2023-11-03,2023-11-05
+465,Omar Hassan,31.0,omar.hassan465@example.com,2023-07-03,687.47,Saudi Arabia,2023-07-03,2023-07-07
+466,Dina Ibrahim,33.0,dina.ibrahim466@example.com,2024-02-12,563.05,Egypt,2024-02-21,2024-02-24
+467,Dina Fathy,21.0,dina.fathy467@example.com,2024-08-03,246.01,Jordan,2024-08-24,2024-09-02
+468,Mona Nasser,35.0,mona.nasser468@example.com,2023-05-24,364.92,Egypt,2023-06-09,2023-06-15
+469,Ahmed Ali,24.0,ahmed.ali469@example.com,2024-03-23,704.47,UAE,2024-04-18,2024-04-20
+470,Mona Nasser,N/A,mona.nasser470@example.com,2023-12-01,615.49,Egypt,2023-12-21,2023-12-26
+471,Yara Kamal,36.0,yara.kamal471@example.com,2023-08-22,705.11,Saudi Arabia,2023-09-08,2023-09-15
+472,Khaled Ibrahim,18.0,khaled.ibrahim472@example.com,2024-11-27,643.74,Qatar,2024-12-18,2024-12-25
+473,Sara Sami,64.0,sara.sami473@example.com,2023-09-10,275.2,Egypt,2023-09-12,2023-09-17
+474,Mohamed Nasser,,mohamed.nasser474@example.com,2024-10-11,670.87,UAE,2024-11-03,2024-11-10
+475,Mona Adel,20.0,mona.adel475@example.com,2023-04-20,266.51,Egypt,2023-04-20,2023-04-25
+476,Yara Adel,22.0,yara.adel476@example.com,2023-10-04,590.9,Egypt,2023-10-08,2023-10-10
+477,Mohamed Nasser,54.0,x@y,2024-04-04,687.0,Qatar,2024-04-21,2024-04-30
+478,Khaled Ali,51.0,khaled.ali478@example.com,2023-01-27,174.52,Egypt,2023-02-07,2023-02-16
+479,Sara Adel,61.0,sara.adel479@example.com,2024-01-30,446.75,Egypt,2024-02-08,2024-02-15
+480,Khaled Ali,47.0,khaled.ali480@example.com,2024-07-26,538.62,UAE,2024-08-13,2024-08-22
+481,Mohamed Nasser,63.0,mohamed.nasser481@example.com,2023-06-23,299.86,UAE,2023-07-01,2023-07-06
+482,Omar Kamal,67.0,omar.kamal482@example.com,2023-05-30,481.78,Egypt,2023-06-04,2023-06-11
+483,Omar Nasser,68.0,omar.nasser483@example.com,2023-11-03,755.21,Jordan,2023-11-28,2023-11-30
+484,Mona Sami,19.0,mona.sami484@example.com,2023-09-10,513.15,Jordan,2023-09-29,2023-10-09
+485,Nour Kamal,62.0,nour.kamal485@example.com,2023-04-20,296.25,UAE,2023-04-29,2023-04-30
+486,Khaled Adel,39.0,khaled.adel486@example.com,2024-09-27,429.58,Jordan,2024-10-22,2024-10-28
+487,Yara Adel,60.0,yara.adel487@example.com,2024-03-16,343.33,Qatar,2024-03-20,2024-03-25
+488,Mona Fathy,46.0,mona.fathy488@example.com,2024-05-05,466.64,Saudi Arabia,2024-05-10,2024-05-17
+489,Mona Sami,62.0,mona.sami489@example.com,2024-10-10,665.45,Jordan,2024-11-09,2024-11-19
+490,Nour Adel,23.0,nour.adel490@example.com,2024-01-21,672.71,Saudi Arabia,2024-02-16,2024-02-23
+491,Mona Ali,35.0,mona.ali491@example.com,2024-07-31,702.01,UAE,2024-08-18,2024-08-27
+492,Mohamed Hassan,58.0,mohamed.hassan492@example.com,2024-04-17,519.02,UAE,2024-05-01,2024-05-06
+493,Sara Nasser,55.0,sara.nasser493@example.com,2024-11-20,477.7,Jordan,2024-11-24,2024-11-29
+494,Nour Sami,55.0,nour.sami494@example.com,2024-11-05,398.11,UAE,2024-11-27,2024-12-04
+495,Khaled Ali,29.0,khaled.ali495@example.com,2024-04-04,538.4,Qatar,2024-04-19,2024-04-29
+496,Khaled Nasser,29.0,khaled.nasser496@example.com,2024-07-10,647.4,Egypt,2024-08-04,2024-08-10
+497,Tarek Ali,62.0,tarek.ali497@example.com,2023-04-22,349.44,UAE,2023-05-13,2023-05-19
+498,Mohamed Hassan,62.0,mohamed.hassan498@example.com,2024-07-30,576.54,Jordan,2024-08-29,2024-09-04
+499,Khaled Ali,34.0,khaled.ali499@example.com,2023-01-11,223.87,Egypt,2023-01-19,2023-01-23
+500,Tarek Fathy,63.0,tarek.fathy500@example.com,2024-04-01,308.06,Saudi Arabia,2024-04-13,2024-04-21
+305,Mona Sami,20.0,mona.sami305@example.com,2023-01-17,570.17,Saudi Arabia,2023-02-11,2023-02-13
+341,Omar Ali,23.0,omar.ali341@example.com,2024-05-29,290.21,UAE,2024-06-16,2024-06-26
+48,Omar Nasser,49.0,omar.nasser48@example.com,2024-07-23,656.37,Jordan,2024-07-27,2024-07-31
+68,Dina Ibrahim,49.0,dina.ibrahim68@example.com,2024-03-16,377.4,UAE,2024-03-17,2024-03-22
+480,Khaled Ali,47.0,khaled.ali480@example.com,2024-07-26,538.62,UAE,2024-08-13,2024-08-22
+486,Khaled Adel,39.0,khaled.adel486@example.com,2024-09-27,429.58,Jordan,2024-10-22,2024-10-28
+311,Tarek Kamal,66.0,tarek.kamal311@example.com,2023-09-17,794.71,Egypt,2023-10-11,2023-10-15
+32,Mohamed Sami,58.0,mohamed.sami32@example.com,2024-06-24,235.54,Qatar,2024-07-07,2024-07-11

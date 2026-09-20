@@ -1,0 +1,57 @@
+name: "crypto_marts"
+version: "2.0.0"
+config-version: 2
+profile: "crypto_marts"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+require-dbt-version: [">=1.8.0", "<2.0.0"]
+
+vars:
+  # Anything before this date is considered out of scope for the marts.
+  earliest_trade_date: "2020-01-01"
+  # Trading days used to annualise volatility. Crypto trades 365 days a year,
+  # unlike the 252 used for equities — getting this wrong silently understates
+  # risk by about 20%.
+  annualisation_days: 365
+  # How far back incremental fact models reprocess on each run. Must be >= the
+  # pipeline's LOOKBACK_DAYS, or late exchange corrections land in the warehouse
+  # and are never picked up by the marts.
+  reload_window_days: 7
+  run_date: "1970-01-01"
+
+models:
+  crypto_marts:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: ephemeral
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: analytics
+
+snapshots:
+  crypto_marts:
+    +target_schema: snapshots
+
+# No `seeds:` block: the project has no seed files. A config path with nothing
+# to apply to is what dbt was warning about on every single run — cheap noise
+# that's worth not shipping.
+
+data_tests:
+  crypto_marts:
+    # Failing rows are written here by `dbt test --store-failures`, so an
+    # investigation starts with a SELECT instead of with guesswork.
+    +store_failures: true
+    +schema: dbt_test_failures
+    +severity: error

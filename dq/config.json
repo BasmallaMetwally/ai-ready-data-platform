@@ -1,0 +1,33 @@
+{
+  "primary_key": "customer_id",
+  "schema": {
+    "age": { "type": "numeric", "min": 0, "max": 120 },
+    "email": { "type": "email" }
+  },
+  "date_pairs": [
+    ["order_start", "order_end"]
+  ],
+  "missing_thresholds": {
+    "warning": 0.05,
+    "critical": 0.15
+  },
+  "scoring_weights": {
+    "missing_critical": 15,
+    "missing_warning": 5,
+    "full_row_duplicate": 10,
+    "pk_duplicate": 15,
+    "outlier": 8,
+    "schema_violation": 12,
+    "consistency_violation": 15
+  },
+  "remediation": {
+    "missing": {
+      "age": "fill_median",
+      "country": "fill_mode",
+      "email": "flag_only"
+    },
+    "missing_default": "flag_only",
+    "duplicates": "drop_both",
+    "outliers": "cap"
+  }
+}

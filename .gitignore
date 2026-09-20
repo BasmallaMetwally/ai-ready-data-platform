@@ -1,0 +1,39 @@
+# ---- generated at runtime by run_all.py / etl / api / dq — do not commit ----
+database/warehouse.db
+dq/quality_history.db
+dq/dq_history.db
+dq/cleaned_*
+dq/audit_trail_*
+dq/dq_report_*.html
+models/*.joblib
+models/*_lookup.csv
+models/*.parquet
+ingestion/crypto/full_stack_optional/**/*.db
+
+# ---- python ----
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+*.egg-info/
+
+# ---- crypto full-stack (docker/airflow local state) ----
+ingestion/crypto/full_stack_optional/logs/
+ingestion/crypto/full_stack_optional/.env
+ingestion/crypto/full_stack_optional/airflow-logs/
+ingestion/crypto/full_stack_optional/dbt/.user.yml
+
+# ---- application logs ----
+logs/*.log
+
+# ---- notebooks ----
+notebooks/.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ---- os / editor ----
+.DS_Store
+.idea/
+.vscode/

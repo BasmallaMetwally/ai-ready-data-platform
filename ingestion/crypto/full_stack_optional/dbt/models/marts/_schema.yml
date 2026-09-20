@@ -1,0 +1,221 @@
+version: 2
+
+models:
+  # ------------------------------------------------------------- dimensions
+  - name: dim_date
+    description: Calendar dimension covering the full history plus one year forward.
+    columns:
+      - name: date_key
+        description: Primary key; the calendar date itself.
+        data_tests: [unique, not_null]
+      - name: calendar_quarter
+        data_tests:
+          - accepted_values: {values: [1, 2, 3, 4]}
+
+  - name: dim_asset
+    description: >
+      Type-2 slowly changing dimension of crypto assets, plus a single unknown
+      member (asset_key = '-1') so that facts for unmapped symbols keep
+      referential integrity instead of carrying an orphan key.
+    columns:
+      - name: asset_key
+        description: Surrogate key over (coin_id, extracted_at); '-1' for the unknown member.
+        data_tests: [unique, not_null]
+      - name: trading_pair
+        data_tests: [not_null]
+      - name: valid_from
+        data_tests: [not_null]
+      - name: is_unknown_member
+        description: True for exactly one row. Filter it out when counting real assets.
+        data_tests: [not_null]
+      - name: supply_issued_pct
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1.0001
+              config: {severity: warn}
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [coin_id, valid_from]
+
+  # ---------------------------------------------------------------- facts
+  - name: fct_ohlcv_daily
+    description: >
+      Daily OHLCV fact at one row per asset per trading day. Schema is enforced
+      as a data contract: dbt fails the build if a column is renamed, dropped or
+      changes type, so a breaking change is caught here rather than by a
+      downstream consumer at 3am.
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: date_key
+        data_type: date
+        constraints: [{type: not_null}]
+        data_tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+      - name: asset_key
+        data_type: text
+        constraints: [{type: not_null}]
+        description: FK to the dim_asset version valid on this date.
+        data_tests:
+          # Now a genuine referential-integrity test, because unmatched facts
+          # resolve to the unknown member rather than to a fabricated key.
+          - relationships:
+              to: ref('dim_asset')
+              field: asset_key
+      - name: trading_pair
+        data_type: text
+        constraints: [{type: not_null}]
+      - name: open_price
+        data_type: numeric(38, 12)
+      - name: high_price
+        data_type: numeric(38, 12)
+      - name: low_price
+        data_type: numeric(38, 12)
+      - name: close_price
+        data_type: numeric(38, 12)
+        constraints: [{type: not_null}]
+        data_tests:
+          - dbt_utils.accepted_range: {min_value: 0, inclusive: false}
+      - name: prior_close_price
+        data_type: numeric(38, 12)
+      - name: base_volume
+        data_type: numeric(38, 12)
+        data_tests:
+          - dbt_utils.accepted_range: {min_value: 0}
+      - name: quote_volume_usd
+        data_type: numeric(38, 12)
+      - name: trade_count
+        data_type: bigint
+      - name: daily_return
+        data_type: numeric(20, 10)
+        description: Simple close-to-close return. Flagged, not failed, beyond ±50%.
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: -0.5
+              max_value: 0.5
+              config: {severity: warn}
+      - name: log_return
+        data_type: double precision
+        description: Natural-log return. Use this for volatility; log returns are additive.
+      - name: return_7d
+        data_type: numeric(20, 10)
+      - name: return_30d
+        data_type: numeric(20, 10)
+      - name: price_range
+        data_type: numeric(38, 12)
+      - name: range_pct
+        data_type: numeric(20, 10)
+      - name: vwap
+        data_type: numeric(38, 12)
+      - name: taker_buy_ratio
+        data_type: numeric(20, 10)
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1.01
+              config: {severity: warn}
+      - name: is_up_day
+        data_type: boolean
+      - name: has_unknown_asset
+        data_type: boolean
+        description: True when no dim_asset version matched. Should normally be 0 rows.
+      - name: loaded_at
+        data_type: timestamp with time zone
+      - name: dbt_updated_at
+        data_type: timestamp with time zone
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [trading_pair, date_key]
+      - dbt_utils.expression_is_true:
+          expression: "high_price >= low_price"
+      - dbt_utils.expression_is_true:
+          expression: "high_price >= close_price"
+      - dbt_utils.expression_is_true:
+          expression: "low_price <= close_price"
+      - dbt_utils.expression_is_true:
+          expression: "not has_unknown_asset"
+          config:
+            severity: warn
+            error_if: ">1000"
+
+  - name: fct_asset_metrics_daily
+    description: Rolling risk and momentum measures derived from fct_ohlcv_daily.
+    columns:
+      - name: trading_pair
+        data_tests: [not_null]
+      - name: trend_regime
+        data_tests:
+          - accepted_values:
+              values: ["bullish", "bearish", "insufficient_history"]
+      - name: drawdown_from_peak
+        description: Always <= 0 by construction; a positive value means a broken window.
+        data_tests:
+          - dbt_utils.accepted_range: {min_value: -1.0, max_value: 0.000001}
+      - name: annualised_volatility_30d
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 10
+              config: {severity: warn}
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [trading_pair, date_key]
+
+  # ----------------------------------------------------------------- marts
+  - name: mart_market_overview
+    description: One row per asset with its latest price, risk and trend state.
+    columns:
+      - name: trading_pair
+        data_tests: [unique, not_null]
+      - name: as_of_date
+        data_tests: [not_null]
+
+  - name: mart_pipeline_health
+    description: >
+      Operational SLIs per Airflow task: success rate, p95 duration, average row
+      count and a derived health status. Treats pipeline telemetry as data.
+    columns:
+      - name: task_id
+        data_tests: [not_null]
+      - name: health_status
+        data_tests:
+          - accepted_values:
+              values: ["healthy", "degraded", "unreliable", "stale"]
+      - name: success_rate_pct
+        data_tests:
+          - dbt_utils.accepted_range: {min_value: 0, max_value: 100}
+
+exposures:
+  - name: market_dashboard
+    type: dashboard
+    maturity: high
+    url: http://localhost:8501
+    description: >
+      Streamlit app used for daily market review. Reads only from the marts —
+      no business logic lives in the presentation layer.
+    depends_on:
+      - ref('mart_market_overview')
+      - ref('fct_ohlcv_daily')
+      - ref('fct_asset_metrics_daily')
+      - ref('mart_pipeline_health')
+    owner:
+      name: Data Engineering
+      email: data-eng@example.com
+
+  - name: freshness_audit
+    type: application
+    maturity: high
+    description: >
+      The audit_freshness task in crypto_transform queries fct_ohlcv_daily and
+      fails the DAG if the marts are stale. Declared as an exposure so that
+      `dbt ls --select +exposure:freshness_audit` reveals the blast radius
+      before anyone refactors the fact table.
+    depends_on:
+      - ref('fct_ohlcv_daily')
+    owner:
+      name: Data Engineering
+      email: data-eng@example.com

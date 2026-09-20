@@ -1,0 +1,49 @@
+[project]
+name = "crypto-market-pipeline"
+version = "1.0.0"
+description = "End-to-end ELT pipeline for crypto market data"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# BLE is enabled deliberately: this codebase has a handful of intentional
+# broad excepts (observability must never break what it observes) and each
+# one should have to justify itself with an explicit noqa.
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "RUF", "PL", "BLE"]
+ignore = [
+    "E501",    # line length is handled by the formatter
+    "PLR0913", # config objects legitimately take many arguments
+    "PLR2004", # magic values are fine in tests and thresholds
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "PLR2004", "PLC0415"]
+# Deferred imports keep DAG parsing fast; a DAG body is declarative, so the
+# statement-count limit does not carry its usual "this function does too much"
+# meaning here.
+"airflow/dags/*" = ["PLC0415", "PLR0915"]
+# `from pyspark.sql import functions as F` is the universal Spark convention.
+# Renaming it would make the job harder, not easier, for any Spark developer.
+"src/pipeline/transform/*" = ["N812"]
+# Deferred imports break a genuine circular dependency: the warehouse loader and
+# the observability/quality modules reference each other, and hoisting either
+# import to module scope would make the package unimportable.
+"src/pipeline/observability.py" = ["PLC0415"]
+"src/pipeline/quality/checks.py" = ["PLC0415"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+markers = ["integration: requires a live database or object store"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

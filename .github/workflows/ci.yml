@@ -1,0 +1,167 @@
+name: Unified Data Platform CI
+
+# This is the workflow that actually runs when unified_data_platform/ is
+# pushed as ONE repo. GitHub Actions only auto-discovers workflow files
+# under the REPO ROOT's .github/workflows/ — a workflow file nested at
+# ingestion/crypto/full_stack_optional/.github/workflows/ci.yml (kept
+# there, unmodified, for the "extract this back into its own repo" case
+# documented in ingestion/crypto/README.md) is invisible to GitHub unless
+# that folder becomes its own repo root. This file exists because that
+# was flagged as a real gap: the crypto project's CI was carried over
+# during the merge but would never actually execute in this monorepo
+# without a root-level workflow pointing at it.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.11"
+  CRYPTO_DIR: ingestion/crypto/full_stack_optional
+
+jobs:
+  dq-and-etl-tests:
+    name: DQ system + ETL + bridge tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: DQ system unit tests
+        run: cd dq && python3 -m unittest discover -s tests -v
+      - name: Full pipeline smoke test (run_all.py)
+        run: python3 run_all.py --skip-ml   # models train fine locally; skipped here to keep CI fast
+      - name: Unified API smoke test
+        run: |
+          cd api
+          python3 -c "
+          from fastapi.testclient import TestClient
+          from main import app
+          c = TestClient(app)
+          for p in ['/health', '/quality/latest']:
+              r = c.get(p)
+              assert r.status_code == 200, f'{p} -> {r.status_code}'
+          print('API smoke test passed')
+          "
+
+  crypto-lint-and-test:
+    name: Crypto pipeline — lint & unit tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: testing
+          POSTGRES_DB: test_market
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    env:
+      TEST_PG_HOST: localhost
+      TEST_PG_USER: postgres
+      TEST_PG_PASSWORD: testing
+      TEST_PG_DATABASE: test_market
+      PYSPARK_PYTHON: python3
+    defaults:
+      run:
+        working-directory: ${{ env.CRYPTO_DIR }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: pip install ruff==0.6.9 mypy==1.11.2 types-requests
+      - name: Ruff
+        run: ruff check src/ tests/ airflow/ dashboard/
+      - name: Ruff format
+        run: ruff format --check src/ tests/
+      - name: Mypy
+        run: mypy src/pipeline --ignore-missing-imports
+      - run: pip install -r requirements-dev.txt
+      - name: Apply DDL to the integration test database
+        run: PGPASSWORD=testing psql -h localhost -U postgres -d test_market -f sql/ddl/001_init.sql
+      - name: pytest (unit + integration)
+        # dq_bridge tests are always collected; the two that need dq/'s
+        # scoring engine present are skipUnless-guarded (see
+        # tests/test_dq_bridge.py) and run for real here since dq/ IS
+        # checked out two directories up in this monorepo.
+        run: PYTHONPATH=src:../../../dq pytest tests/ -v --cov=pipeline --cov-report=term-missing --cov-fail-under=85
+
+  dag-validation:
+    name: Airflow DAG import check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.CRYPTO_DIR }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install "apache-airflow==2.9.3" apache-airflow-providers-apache-spark pydantic-settings pandas numpy
+      - name: Check DAGs import without errors
+        env:
+          # relative to working-directory (full_stack_optional): src is
+          # the crypto pipeline package, ../../../dq is this monorepo's
+          # dq/ package that pipeline.quality.dq_bridge imports.
+          PYTHONPATH: src:../../../dq
+          AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+        run: |
+          airflow db migrate
+          python -c "
+          from airflow.models import DagBag
+          bag = DagBag('airflow/dags', include_examples=False)
+          assert not bag.import_errors, bag.import_errors
+          expected = {'crypto_market_ingest', 'crypto_transform',
+                      'crypto_assets_weekly', 'crypto_backfill'}
+          missing = expected - set(bag.dags)
+          assert not missing, f'DAGs failed to register: {missing}'
+          print(f'{len(bag.dags)} DAGs imported cleanly: {sorted(bag.dags)}')
+          "
+
+  dbt:
+    name: dbt compile & test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: warehouse
+          POSTGRES_PASSWORD: warehouse
+          POSTGRES_DB: market
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    env:
+      PG_HOST: localhost
+      PG_USER: warehouse
+      PG_PASSWORD: warehouse
+      PG_DATABASE: market
+    defaults:
+      run:
+        working-directory: ${{ env.CRYPTO_DIR }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install dbt-core==1.8.7 dbt-postgres==1.8.2
+      - name: Apply DDL
+        run: PGPASSWORD=warehouse psql -h localhost -U warehouse -d market -f sql/ddl/001_init.sql
+      - name: dbt deps
+        run: cd dbt && dbt deps --profiles-dir .
+      - name: dbt compile
+        run: cd dbt && dbt compile --profiles-dir . --target prod

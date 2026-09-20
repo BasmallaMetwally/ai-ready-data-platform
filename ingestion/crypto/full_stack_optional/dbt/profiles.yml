@@ -1,0 +1,23 @@
+crypto_marts:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PG_HOST', 'postgres') }}"
+      port: "{{ env_var('PG_PORT', '5432') | int }}"
+      user: "{{ env_var('PG_USER', 'warehouse') }}"
+      password: "{{ env_var('PG_PASSWORD', 'warehouse') }}"
+      dbname: "{{ env_var('PG_DATABASE', 'market') }}"
+      schema: dbt_dev
+      threads: 4
+      keepalives_idle: 0
+    prod:
+      type: postgres
+      host: "{{ env_var('PG_HOST', 'postgres') }}"
+      port: "{{ env_var('PG_PORT', '5432') | int }}"
+      user: "{{ env_var('PG_USER', 'warehouse') }}"
+      password: "{{ env_var('PG_PASSWORD', 'warehouse') }}"
+      dbname: "{{ env_var('PG_DATABASE', 'market') }}"
+      schema: analytics
+      threads: 8
+      keepalives_idle: 0

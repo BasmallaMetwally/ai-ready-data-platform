@@ -1,0 +1,26 @@
+# ---------------------------------------------------------------- orchestration
+apache-airflow-providers-apache-spark==4.8.1
+apache-airflow-providers-postgres==5.11.2
+
+# ------------------------------------------------------------------- transform
+pyspark==3.5.1
+dbt-core==1.8.7
+dbt-postgres==1.8.2
+
+# ---------------------------------------------------------------- extract/load
+requests==2.32.3
+psycopg[binary]==3.2.3
+pyarrow==17.0.0
+boto3==1.35.36
+
+# ------------------------------------------------------- quality (dq_bridge)
+# pipeline/quality/dq_bridge.py imports pandas directly to hand OHLCV
+# batches to the shared DQ engine (see ../../dq/quality_gate.py in the
+# unified_data_platform layout). Pinned loosely to match dq/requirements.txt.
+pandas>=2.0,<3.0
+numpy>=1.24,<3.0
+
+# ----------------------------------------------------------------------- utils
+pydantic==2.9.2
+pydantic-settings==2.5.2
+pendulum==3.0.0

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_ohlcv
+    description: Cleaned, typed OHLCV candles. One row per pair per bar.
+    columns:
+      - name: trading_pair
+        data_tests: [not_null]
+      - name: trade_date
+        data_tests: [not_null]
+      - name: close_price
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range: {min_value: 0, inclusive: false}
+
+  - name: stg_assets
+    description: Cleaned CoinGecko snapshots with a recency rank per coin.
+    columns:
+      - name: coin_id
+        data_tests: [not_null]
+      - name: trading_pair
+        data_tests: [not_null]

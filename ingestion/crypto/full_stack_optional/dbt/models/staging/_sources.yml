@@ -1,0 +1,67 @@
+version: 2
+
+sources:
+  - name: raw
+    # No `database:` key, deliberately. Hardcoding "market" here made every
+    # source test issue a cross-database reference the moment the connected
+    # database had any other name (a CI service container, a developer's
+    # locally named database, a future rename) — Postgres flatly refuses
+    # cross-database queries, so `dbt build` failed with "cross-database
+    # references are not implemented" even though the schema and tables were
+    # perfectly fine. Found by actually running `dbt build` against a real
+    # Postgres instance rather than only `dbt compile`, which never executes
+    # a source test and so never issues the query that trips this. Omitting
+    # `database:` makes dbt resolve the source against whatever database the
+    # active target is already connected to, which is the only value that is
+    # ever actually correct.
+    schema: raw
+    description: >
+      Landing zone written by the Airflow loaders. Nothing in here is ever
+      edited by hand; it is reproducible from the S3 bronze layer.
+    freshness:
+      warn_after: {count: 26, period: hour}
+      error_after: {count: 48, period: hour}
+    loaded_at_field: loaded_at
+
+    tables:
+      - name: binance_klines
+        description: One row per closed OHLCV candle per trading pair.
+        columns:
+          - name: symbol
+            description: Binance trading pair, e.g. BTCUSDT.
+            data_tests: [not_null]
+          - name: open_time
+            description: Candle open, UTC.
+            data_tests: [not_null]
+          - name: close
+            data_tests:
+              - not_null
+              - dbt_utils.accepted_range: {min_value: 0, inclusive: false}
+        data_tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns: [symbol, interval, open_time]
+
+      - name: coingecko_assets
+        description: Asset reference snapshots; one row per coin per extract.
+        freshness:
+          warn_after: {count: 8, period: day}
+          error_after: {count: 21, period: day}
+        columns:
+          - name: coin_id
+            data_tests: [not_null]
+          - name: extracted_at
+            data_tests: [not_null]
+
+      - name: pipeline_audit
+        description: >
+          One row per task execution, written by pipeline.observability. Powers
+          mart_pipeline_health. Excluded from freshness checks because a DAG
+          that has not run is exactly what this table is meant to reveal.
+        loaded_at_field: null
+        freshness: null
+        columns:
+          - name: run_id
+            data_tests: [not_null]
+          - name: status
+            data_tests:
+              - accepted_values: {values: ["success", "failed", "skipped"]}

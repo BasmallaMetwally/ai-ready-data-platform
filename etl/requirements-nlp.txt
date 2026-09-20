@@ -1,0 +1,15 @@
+# Optional — only needed for `python3 etl/process_reviews.py --backend hf`.
+# The rest of the platform (including the default lexicon sentiment
+# backend) does not need any of this.
+transformers>=4.40
+torch>=2.2   # or tensorflow>=2.16 if you prefer that backend instead
+
+# Verified in the build environment for this repo: `transformers` installs
+# fine from PyPI, but `torch` was not installed (multi-GB download, and
+# this build environment also can't reach huggingface.co to fetch model
+# weights). `python3 etl/process_reviews.py --backend hf` was run against
+# that exact state and correctly logged a warning and fell back to the
+# lexicon backend rather than crashing — that fallback path is what's
+# verified here, not the model's actual accuracy. Run
+# `python3 etl/process_reviews.py --compare` yourself once torch and
+# network access are available to see a real lexicon-vs-HF comparison.

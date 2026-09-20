@@ -1,0 +1,42 @@
+# docker-compose.yml
+# Run a local MySQL for development with one command:
+#   docker compose up -d
+#
+# Connection string afterwards:
+#   mysql://warehouse:warehouse@localhost:3306/ecommerce_dw
+
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: ecommerce_warehouse_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ecommerce_dw
+      MYSQL_USER: warehouse
+      MYSQL_PASSWORD: warehouse
+      MYSQL_ROOT_PASSWORD: root_dev_only
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+      - ./schema_mysql.sql:/docker-entrypoint-initdb.d/01_schema.sql
+    command: --default-authentication-plugin=mysql_native_password
+
+  # Optional visual admin UI (phpMyAdmin)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: ecommerce_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: warehouse
+      PMA_PASSWORD: warehouse
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+
+volumes:
+  mysqldata:

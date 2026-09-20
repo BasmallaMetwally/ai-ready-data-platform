@@ -1,0 +1,217 @@
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: airflow/Dockerfile
+  environment: &airflow-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__CORE__PARALLELISM: 16
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
+    AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 30
+    AIRFLOW_CONN_SPARK_DEFAULT: "spark://spark-master:7077"
+    PYTHONPATH: /opt/airflow/src:/opt/airflow/dq
+    # Pipeline settings, consumed by pipeline.config.Settings
+    PG_HOST: postgres
+    PG_PORT: 5432
+    PG_USER: warehouse
+    PG_PASSWORD: warehouse
+    PG_DATABASE: market
+    S3_ENDPOINT_URL: http://minio:9000
+    S3_ACCESS_KEY: minioadmin
+    S3_SECRET_KEY: minioadmin
+    S3_BUCKET: market-lake
+    SPARK_MASTER: spark://spark-master:7077
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./src:/opt/airflow/src
+    - ./dbt:/opt/airflow/dbt
+    - ./sql:/opt/airflow/sql
+    # Mounts the SAME dq/ package the e-commerce ETL uses, so this DAG can
+    # import quality_gate.py directly (see pipeline/quality/dq_bridge.py)
+    # instead of keeping a second copy of the DQ engine.
+    - ../../../dq:/opt/airflow/dq
+    - airflow-logs:/opt/airflow/logs
+  depends_on:
+    postgres:
+      condition: service_healthy
+    minio:
+      condition: service_healthy
+
+services:
+  # --------------------------------------------------------------- warehouse
+  postgres:
+    image: postgres:16-alpine
+    container_name: cmp-postgres
+    environment:
+      POSTGRES_USER: warehouse
+      POSTGRES_PASSWORD: warehouse
+      POSTGRES_DB: market
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./sql/ddl:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U warehouse -d market"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    command:
+      - postgres
+      - -c
+      - shared_buffers=512MB
+      - -c
+      - max_connections=200
+
+  # Airflow keeps its metadata in a separate database on the same server.
+  postgres-init:
+    image: postgres:16-alpine
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGPASSWORD: warehouse
+    entrypoint:
+      - sh
+      - -c
+      - |
+        psql -h postgres -U warehouse -d market -tc \
+          "SELECT 1 FROM pg_roles WHERE rolname='airflow'" | grep -q 1 || \
+          psql -h postgres -U warehouse -d market -c \
+          "CREATE ROLE airflow LOGIN PASSWORD 'airflow' SUPERUSER"
+        psql -h postgres -U warehouse -d market -tc \
+          "SELECT 1 FROM pg_database WHERE datname='airflow'" | grep -q 1 || \
+          psql -h postgres -U warehouse -d market -c "CREATE DATABASE airflow OWNER airflow"
+        echo "metadata database ready"
+
+  # --------------------------------------------------------------- data lake
+  minio:
+    image: minio/minio:RELEASE.2024-09-13T20-26-02Z
+    container_name: cmp-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  minio-init:
+    image: minio/mc:RELEASE.2024-09-16T17-43-14Z
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mc alias set local http://minio:9000 minioadmin minioadmin
+        mc mb --ignore-existing local/market-lake
+        mc anonymous set download local/market-lake
+        echo "bucket market-lake ready"
+
+  # ------------------------------------------------------------------- spark
+  spark-master:
+    image: bitnami/spark:3.5.1
+    container_name: cmp-spark-master
+    environment:
+      SPARK_MODE: master
+      SPARK_RPC_AUTHENTICATION_ENABLED: "no"
+      SPARK_SSL_ENABLED: "no"
+    ports:
+      - "8081:8080"   # Spark master UI
+      - "7077:7077"
+    volumes:
+      - ./src:/opt/pipeline/src
+
+  spark-worker:
+    image: bitnami/spark:3.5.1
+    depends_on: [spark-master]
+    environment:
+      SPARK_MODE: worker
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_WORKER_MEMORY: 2G
+      SPARK_WORKER_CORES: 2
+      SPARK_RPC_AUTHENTICATION_ENABLED: "no"
+    volumes:
+      - ./src:/opt/pipeline/src
+    deploy:
+      replicas: 2
+
+  # ----------------------------------------------------------------- airflow
+  airflow-init:
+    <<: *airflow-common
+    depends_on:
+      postgres-init:
+        condition: service_completed_successfully
+      minio-init:
+        condition: service_completed_successfully
+    entrypoint:
+      - bash
+      - -c
+      - |
+        airflow db migrate
+        airflow users create --username admin --password admin \
+          --firstname Data --lastname Engineer --role Admin --email admin@example.com || true
+        airflow variables set crypto_symbols "BTCUSDT,ETHUSDT,SOLUSDT,BNBUSDT,XRPUSDT,ADAUSDT"
+        cd /opt/airflow/dbt && dbt deps --profiles-dir .
+        echo "airflow initialised"
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: cmp-airflow-web
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    command: webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+    restart: unless-stopped
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: cmp-airflow-scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    command: scheduler
+    restart: unless-stopped
+
+  # --------------------------------------------------------------- dashboard
+  dashboard:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    container_name: cmp-dashboard
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PG_HOST: postgres
+      PG_USER: warehouse
+      PG_PASSWORD: warehouse
+      PG_DATABASE: market
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dashboard:/app/dashboard
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  minio-data:
+  airflow-logs:

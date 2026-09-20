@@ -1,0 +1,45 @@
+# Catch problems on the developer's machine, not in CI ten minutes later.
+# Install once with: pre-commit install
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+        exclude: ^dbt/(profiles|packages)\.yml$
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: no-commit-to-branch
+        args: [--branch, main]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 3.2.0
+    hooks:
+      - id: sqlfluff-lint
+        additional_dependencies: [dbt-postgres==1.8.2, sqlfluff-templater-dbt==3.2.0]
+
+  - repo: local
+    hooks:
+      - id: no-secrets-in-env
+        name: Block committing a populated .env
+        entry: bash -c 'test ! -f .env || (echo "Refusing to commit .env — use .env.example" && exit 1)'
+        language: system
+        pass_filenames: false
+
+      - id: pytest-fast
+        name: Run the unit tests
+        entry: bash -c 'PYTHONPATH=src pytest tests/ -q --no-header'
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
