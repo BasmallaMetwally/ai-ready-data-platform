@@ -87,6 +87,17 @@ def write_bronze(
         log.warning("no records for %s/%s on %s — skipping write", dataset, symbol, partition_date)
         return ""
 
+    # PyArrow versions differ on whether parquet writing enforces
+    # ``nullable=False``. Validate the contract here so an incomplete raw
+    # record cannot silently land as a null in bronze on one runtime only.
+    required_fields = [field.name for field in BRONZE_SCHEMA if not field.nullable]
+    for row_number, record in enumerate(records):
+        for field_name in required_fields:
+            if record.get(field_name) is None:
+                raise pa.ArrowInvalid(
+                    f"non-nullable field '{field_name}' is missing or null in record {row_number}"
+                )
+
     table = pa.Table.from_pylist(records, schema=BRONZE_SCHEMA)
     target_dir = _strip_scheme(settings.bronze_path(dataset, symbol, partition_date))
     target_file = f"{target_dir}/data.parquet"
