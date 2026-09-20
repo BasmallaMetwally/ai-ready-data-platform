@@ -97,11 +97,18 @@ schemas live in [postgres_migration](postgres_migration/) and
 The latest reproducible e-commerce pipeline run produced these DQ-gate scores
 (threshold: 80/100):
 
-| Warehouse table | DQ score | Result |
-| --- | ---: | --- |
-| `dim_customer` | 100.0 | pass |
-| `dim_product` | 92.7 | pass |
-| `fact_sales` | 92.0 | pass |
+| Warehouse table | DQ score | Result | Main observation |
+| --- | ---: | --- | --- |
+| `dim_customer` | 100.0 | pass | No deductions from the configured checks. |
+| `dim_product` | 92.7 | pass | IQR outliers: 28 `cost_price`, 27 `unit_price`. |
+| `fact_sales` | 92.0 | pass | IQR outliers: 9,432 `total_amount`, 7,703 `unit_price`. |
+
+These are distribution-based outliers in intentionally varied synthetic sales
+data—not missing-value penalties or rejected rows. The gate evaluates missing
+values, full-row and primary-key duplicates, IQR outliers, configured schema
+rules, and date consistency. Scores below the configured threshold block the
+load; this run passed at 80/100. See [DQ component guide](dq/README.md) for
+the scoring and remediation implementation.
 
 ## Validate locally
 

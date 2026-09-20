@@ -134,6 +134,12 @@ def _rows(df: pd.DataFrame, columns: list[str]) -> list[tuple[Any, ...]]:
 
 
 def bulk_insert(conn: Any, target: str, df: pd.DataFrame, table_name: str, exclude_cols: tuple[str, ...] = ()) -> None:
+    # SQLite stores booleans as 0/1, while PostgreSQL requires actual Python
+    # bool values for BOOLEAN columns. Keep the source transformation portable
+    # and adapt at the database boundary.
+    if target == "postgres" and table_name == "dim_date":
+        df = df.copy()
+        df["is_weekend"] = df["is_weekend"].astype(bool)
     columns = [column for column in df.columns if column not in exclude_cols]
     rows = _rows(df, columns)
     if not rows:
