@@ -1,0 +1,125 @@
+claim_id,member_name,account_number,member_id,service_date,amount,description,status
+CLM00017,ZoÃ« MÃ¼ller,763587,8211096928454919,25-Feb-25,1005.90,Emergency department visit with imaging,DENIED
+CLM00090,Noor Ibrahim,674591,1280581469006731,01/02/2025,3994.37,Annual preventive screening an,PENDING
+CLM00047,Mateo Peña,502982778,9480010902644003,"Apr 12, 2025",317.85,Dental cleaning and radiographs,DENIED
+CLM00072,Ahmed Hassan,0000819488,3387116921043617,23/06/2025,2498.69,Annual preventive screening and vaccination,DENIED
+CLM00004,Omar Farouk,0000307419,6.66229E+15,"Nov 13, 2025",3543.53,"Physiotherapy session, lower b",DENIED
+CLM00069,FranÃ§ois Dubois,722687986,6944221848047661,08-Sep-25,3463.06,Annual preventive screening an,DENIED
+CLM00013,Ãsa Lindqvist,916690353,7898024708009574,"Mar 06, 2025",526.64,Annual preventive screening an,DENIED
+CLM00010,Zoë Müller,676567501,3403346664752912,"Nov 25, 2025",1370.60,"Physiotherapy session, lower b",PENDING
+CLM00001,ZoÃ« MÃ¼ller,288389,3010501012863888,2025-03-13,2949.84,Dental cleaning and radiograph,DENIED
+CLM00016,Mateo Peña,360916298,5260164250947999,28-Jul-25,773.78,Outpatient consultation and fo,DENIED
+CLM00074,ZoÃ« MÃ¼ller,727712,9137319339642631,2025.01.15,198.27,Outpatient consultation and fo,PENDING
+CLM00027,FranÃ§ois Dubois,978413,9756767425997790,"Jan 21, 2025",3597.21,Emergency department visit with imaging,DENIED
+CLM00036,SofÃ­a NÃºÃ±ez,258220114,1416255450332687,06-May-25,3935.99,Prescription refill: chronic hypertension,PAID
+CLM00058,Mateo PeÃ±a,427899537,6593716308947811,"Jan 31, 2025",2444.38,Dental cleaning and radiograph,PAID
+CLM00011,Ahmed Hassan,214257751,6632204807491094,"Jun 02, 2025",3369.05,Prescription refill: chronic h,DENIED
+CLM00120,ZoÃ« MÃ¼ller,0000949115,6374947559263942,"Oct 02, 2025",80.49,Prescription refill: chronic h,DENIED
+CLM00053,ChloÃ© LefÃ¨vre,782169,3979502781514317,2025.06.30,2815.88,"Physiotherapy session, lower back, 45 minutes",PENDING
+CLM00084,Ãsa Lindqvist,246205,5841789163007258,2025-03-11,1563.75,"Physiotherapy session, lower b",DENIED
+CLM00042,Noor Ibrahim,336801619,2976374247857017,2025.05.20,1751.81,Outpatient consultation and follow-up laboratory panel,PENDING
+CLM00030,JosÃ© Ãlvarez,527849588,3509430541842860,2025-02-05,3868.05,"Physiotherapy session, lower back, 45 minutes",PENDING
+CLM00056,Åsa Lindqvist,193319,1.46276E+15,10/05/2025,3765.14,Annual preventive screening an,PAID
+CLM00002,José Álvarez,0868820204,7.31698E+15,2025.10.07,1686.79,Annual preventive screening and vaccination,DENIED
+CLM00054,Ahmed Hassan,0000774483,3490486110842946,2025.10.29,3906.78,Prescription refill: chronic h,DENIED
+CLM00110,ChloÃ© LefÃ¨vre,695847,9257315752158840,29-Jun-25,1251.27,Dental cleaning and radiograph,DENIED
+CLM00107,Åsa Lindqvist,713811693,2695509859193304,14/06/2025,2425.95,Prescription refill: chronic hypertension,PAID
+CLM00055,FranÃ§ois Dubois,560081,3470774969974188,"Jan 24, 2025",3897.57,Prescription refill: chronic h,PENDING
+CLM00076,Ãsa Lindqvist,827579147,2422916422851346,2025.02.07,1775.29,"Physiotherapy session, lower back, 45 minutes",DENIED
+CLM00103,Chloé Lefèvre,0000816964,1687964288630493,"Sep 19, 2025",2538.40,Prescription refill: chronic hypertension,DENIED
+CLM00091,Mateo PeÃ±a,0000132321,6623350322229966,21-Nov-25,2347.68,Dental cleaning and radiographs,PENDING
+CLM00049,Åsa Lindqvist,0567600762,7609440028970953,2025-09-25,3862.41,"Physiotherapy session, lower b",DENIED
+CLM00015,JosÃ© Ãlvarez,661759,3062121425852896,2025-02-04,3623.10,"Physiotherapy session, lower b",PAID
+CLM00020,JosÃ© Ãlvarez,0682177668,7737163271727691,2025-06-10,242.80,Prescription refill: chronic h,PENDING
+CLM00087,Mateo PeÃ±a,0000870127,5991859090872965,"Apr 17, 2025",2351.74,Emergency department visit with imaging,PENDING
+CLM00067,ZoÃ« MÃ¼ller,0000123172,8495279059160403,2025-03-20,2001.03,Dental cleaning and radiograph,PENDING
+CLM00064,FranÃ§ois Dubois,529982328,7849973820185884,2025.10.09,161.24,Outpatient consultation and fo,PENDING
+CLM00068,Ahmed Hassan,0000966648,5577827826487136,2025.03.11,3458.15,"Physiotherapy session, lower back, 45 minutes",PENDING
+CLM00021,ZoÃ« MÃ¼ller,825003955,3118530679975660,2025-07-26,492.75,Prescription refill: chronic h,PAID
+CLM00019,Omar Farouk,409386,9345333048563964,2025-08-21,1151.72,Dental cleaning and radiograph,DENIED
+CLM00035,Noor Ibrahim,944956,8169953806912711,2025-03-28,2640.52,"Physiotherapy session, lower back, 45 minutes",DENIED
+CLM00011,Ahmed Hassan,214257751,6632204807491094,"Jun 02, 2025",3369.05,Prescription refill: chronic h,DENIED
+CLM00039,FranÃ§ois Dubois,784683755,7897834632536162,24-Sep-25,1946.12,Emergency department visit wit,PENDING
+CLM00093,ChloÃ© LefÃ¨vre,0000697416,4.37140E+15,20/03/2025,2751.98,Annual preventive screening and vaccination,PAID
+CLM00116,Noor Ibrahim,406084084,7873541466707721,24-Mar-25,1102.07,Prescription refill: chronic hypertension,PAID
+CLM00092,Zoë Müller,0798916441,7926201175235258,10-Oct-25,2887.55,Emergency department visit wit,PENDING
+CLM00077,Omar Farouk,214518079,4435021372851024,2025.10.20,,"Physiotherapy session, lower b",DENIED
+CLM00063,François Dubois,613762,6717634135238786,09-Sep-25,3876.69,Annual preventive screening an,PENDING
+CLM00034,Ahmed Hassan,423142470,5935378728684245,2025-01-01,1225.94,Emergency department visit wit,PENDING
+CLM00089,Noor Ibrahim,66645,5037705095397736,2025-07-05,2060.25,Outpatient consultation and follow-up laboratory panel,PENDING
+CLM00073,ChloÃ© LefÃ¨vre,0915401487,8857726368129093,2025.10.05,158.06,Outpatient consultation and fo,PAID
+CLM00108,Ahmed Hassan,741995,9926009073134867,2025.08.13,2103.41,Prescription refill: chronic h,PAID
+CLM00032,Omar Farouk,970535,5.84994E+15,"Dec 18, 2025",2881.93,Dental cleaning and radiographs,DENIED
+CLM00012,Noor Ibrahim,743111853,5400968481104955,"Jan 10, 2025",460.79,"Physiotherapy session, lower back, 45 minutes",PENDING
+CLM00022,François Dubois,750981,3149890179095194,2025.05.16,1592.21,Dental cleaning and radiograph,DENIED
+CLM00068,Ahmed Hassan,0000966648,5577827826487136,2025.03.11,3458.15,"Physiotherapy session, lower back, 45 minutes",PENDING
+CLM00029,SofÃ­a NÃºÃ±ez,0000825622,1973637738231716,"Jul 15, 2025",3490.58,Annual preventive screening and vaccination,PAID
+CLM00115,Omar Farouk,549533634,2459691735308703,13/04/2025,3208.02,Emergency department visit wit,PENDING
+CLM00078,JosÃ© Ãlvarez,900122509,8501544767980789,2025.05.27,3106.33,Emergency department visit with imaging,DENIED
+CLM00057,Mateo PeÃ±a,0191462297,3235508976610068,2025-03-02,2238.92,Annual preventive screening an,DENIED
+CLM00028,Ahmed Hassan,0354194771,2463685618257044,2025.04.01,3527.44,Outpatient consultation and follow-up laboratory panel,PAID
+CLM00086,Omar Farouk,0000128093,8.63841E+15,2025-08-21,380.32,Emergency department visit wit,DENIED
+CLM00052,Sofía Núñez,793532952,5420924564262339,"Aug 18, 2025",3174.84,Outpatient consultation and fo,PENDING
+CLM00008,Ahmed Hassan,588637,3366567949691496,2025.10.27,1722.31,Prescription refill: chronic h,PENDING
+CLM00105,Mateo PeÃ±a,770575153,8784444928575073,18-Nov-25,1274.81,Annual preventive screening an,PAID
+CLM00098,ChloÃ© LefÃ¨vre,709448939,1765223998988060,27/01/2025,634.99,Prescription refill: chronic h,PAID
+CLM00007,José Álvarez,530747414,1596172675394206,2025.04.19,3653.85,Prescription refill: chronic hypertension,DENIED
+CLM00100,FranÃ§ois Dubois,0923935280,7882947674264033,11-May-25,1168.45,Outpatient consultation and follow-up laboratory panel,PAID
+CLM00037,Sofía Núñez,721024,9040363485520519,2025-02-24,3117.01,Emergency department visit wit,PAID
+CLM00025,SofÃ­a NÃºÃ±ez,318610946,6712708888416210,16/05/2025,2029.06,"Physiotherapy session, lower b",PAID
+CLM00117,José Álvarez,415712,4368347437861320,"May 01, 2025",1553.87,Outpatient consultation and follow-up laboratory panel,PENDING
+CLM00114,Mateo Peña,784897,5043586226562025,"Apr 30, 2025",2143.03,"Physiotherapy session, lower b",PENDING
+CLM00119,Ahmed Hassan,880862406,5753745432776946,2025.08.05,458.08,"Physiotherapy session, lower back, 45 minutes",PAID
+CLM00106,FranÃ§ois Dubois,39434,4321289864403126,2025-05-27,320.77,Outpatient consultation and follow-up laboratory panel,DENIED
+CLM00051,ChloÃ© LefÃ¨vre,465436049,8929215204176585,02/11/2025,2809.22,"Physiotherapy session, lower b",DENIED
+CLM00066,Ãsa Lindqvist,620455331,1.26003E+15,"Nov 19, 2025",2441.35,Emergency department visit wit,DENIED
+CLM00040,Ahmed Hassan,401641,2376346725331441,2025.12.28,867.60,Annual preventive screening an,PENDING
+CLM00041,Mateo Peña,0120972273,8932249929599576,2025.10.22,1530.82,Outpatient consultation and fo,PENDING
+CLM00079,Ahmed Hassan,0773728014,1.35509E+15,2025.06.08,3157.61,Outpatient consultation and fo,DENIED
+CLM00080,Ahmed Hassan,0000824718,8894457149464684,2025.07.07,2130.45,"Physiotherapy session, lower back, 45 minutes",PAID
+CLM00113,Ahmed Hassan,265627642,2628914288494720,21-Dec-25,3087.82,Emergency department visit with imaging,DENIED
+CLM00026,FranÃ§ois Dubois,463298,7356085816094105,"Aug 07, 2025",2250.21,Outpatient consultation and fo,PAID
+CLM00038,Åsa Lindqvist,0700141462,3857968285487141,15-Aug-25,2456.42,Dental cleaning and radiographs,DENIED
+CLM00005,Zoë Müller,208449460,3503761407767511,2025.08.21,2548.20,"Physiotherapy session, lower back, 45 minutes",PAID
+CLM00059,Ahmed Hassan,0000472387,6348577274142822,2025.08.29,1175.67,Emergency department visit with imaging,PENDING
+CLM00109,Mateo Peña,661532,4014253778161090,03-Feb-25,1328.82,Prescription refill: chronic hypertension,DENIED
+CLM00102,ChloÃ© LefÃ¨vre,993645,5144186533967117,20/12/2025,3680.28,Outpatient consultation and fo,PENDING
+CLM00024,Noor Ibrahim,0000856795,3696563239053910,06/12/2025,427.79,Emergency department visit wit,PENDING
+CLM00104,SofÃ­a NÃºÃ±ez,0000268402,2562737582827425,"Nov 05, 2025",624.19,Dental cleaning and radiograph,PAID
+CLM00062,FranÃ§ois Dubois,240044,7073543154454081,2025.10.22,2354.68,Outpatient consultation and fo,DENIED
+CLM00060,Mateo PeÃ±a,312406764,2033813339007065,"Oct 06, 2025",910.87,Emergency department visit with imaging,PENDING
+CLM00088,Noor Ibrahim,182973,6954276843332110,2025-01-14,540.24,"Physiotherapy session, lower b",PAID
+CLM00023,Mateo Peña,178663096,2919921409910923,"Sep 17, 2025",1071.82,"Physiotherapy session, lower back, 45 minutes",PAID
+CLM00083,Noor Ibrahim,639717,6.83353E+15,2025.02.02,,Annual preventive screening an,DENIED
+CLM00044,Omar Farouk,476786,4039932011260601,14/07/2025,1123.85,Annual preventive screening an,PENDING
+CLM00070,Sofía Núñez,0356415500,4449496849699997,2025.04.30,3426.21,Annual preventive screening an,PAID
+CLM00111,ChloÃ© LefÃ¨vre,819532005,8.46660E+15,17-Dec-25,3651.11,Outpatient consultation and follow-up laboratory panel,DENIED
+CLM00118,Ahmed Hassan,961959,5255495815381341,23-Dec-25,3326.98,Dental cleaning and radiograph,PENDING
+CLM00018,Noor Ibrahim,683823,5869187240524245,08-Jan-25,3876.45,Emergency department visit wit,PAID
+CLM00043,Ahmed Hassan,673510887,9168886178891257,21/07/2025,2373.69,Dental cleaning and radiograph,PAID
+CLM00097,Ahmed Hassan,530338918,2277890508380594,2025-11-21,3887.66,Outpatient consultation and fo,DENIED
+CLM00095,ChloÃ© LefÃ¨vre,532060,2393683441519845,2025-12-03,1936.52,Outpatient consultation and follow-up laboratory panel,PENDING
+CLM00075,Ahmed Hassan,639098,4445654138345487,"Nov 14, 2025",2737.29,Annual preventive screening an,DENIED
+CLM00099,Noor Ibrahim,450797,3551253999764907,2025.12.14,,Annual preventive screening an,DENIED
+CLM00014,SofÃ­a NÃºÃ±ez,528414718,7.05002E+15,29/11/2025,1503.08,Prescription refill: chronic h,PENDING
+CLM00081,ChloÃ© LefÃ¨vre,0602866993,1678239601175771,14-Mar-25,,Emergency department visit with imaging,DENIED
+CLM00085,Ãsa Lindqvist,400368694,7217493582452787,2025.07.09,880.82,Annual preventive screening and vaccination,PAID
+CLM00094,Noor Ibrahim,0000588866,3969186318580586,10-Dec-25,502.09,"Physiotherapy session, lower back, 45 minutes",DENIED
+CLM00031,FranÃ§ois Dubois,278361,1976400849516866,02-Nov-25,1746.74,Dental cleaning and radiograph,PENDING
+CLM00045,SofÃ­a NÃºÃ±ez,938842599,6870485670767443,21/01/2025,3020.62,Emergency department visit wit,PAID
+CLM00009,JosÃ© Ãlvarez,264112119,2440989992472004,15-Dec-25,1697.31,Outpatient consultation and fo,PENDING
+CLM00101,Chloé Lefèvre,903625,1381026915740581,2025-08-12,89.69,Outpatient consultation and fo,PENDING
+CLM00046,Ãsa Lindqvist,0923450567,2511310381541895,07/11/2025,2434.88,Dental cleaning and radiograph,DENIED
+CLM00086, OMAR FAROUK ,0000128093,8.63841E+15,2025-08-21,380.32,Emergency department visit wit,denied
+CLM00096,Mateo PeÃ±a,790092970,1236474700562236,08/11/2025,,Dental cleaning and radiograph,PENDING
+CLM00033,ChloÃ© LefÃ¨vre,233815413,9106904186376352,2025.06.03,2035.88,Dental cleaning and radiograph,PENDING
+CLM00048,Mateo PeÃ±a,472807202,4858484942732824,2025.12.05,1491.72,Prescription refill: chronic h,DENIED
+CLM00024,Noor Ibrahim,0000856795,3696563239053910,06/12/2025,427.79,Emergency department visit wit,PENDING
+CLM00082,Noor Ibrahim,386490,7746498863627021,2025.12.11,1059.71,Annual preventive screening an,DENIED
+CLM00006,Ahmed Hassan,362863730,5163666552602351,2025-07-14,1090.74,Dental cleaning and radiographs,DENIED
+CLM00061,FranÃ§ois Dubois,491465,3.73901E+15,2025-12-25,1619.00,"Physiotherapy session, lower b",DENIED
+CLM00112,Ãsa Lindqvist,0000144247,1695038043126972,2025-06-01,3380.05,Outpatient consultation and fo,DENIED
+CLM00050,SofÃ­a NÃºÃ±ez,193053577,8941026361104236,2025-08-19,986.80,Annual preventive screening an,DENIED
+CLM00003,Ahmed Hassan,800581,1.92063E+15,2025-02-17,1529.01,"Physiotherapy session, lower b",PENDING
+CLM00071,Ahmed Hassan,38817,5524233192484079,30/10/2025,1338.00,Outpatient consultation and follow-up laboratory panel,PENDING
+CLM00065,Noor Ibrahim,0000056837,5669686818367698,05-Jul-25,2496.20,Annual preventive screening an,DENIED

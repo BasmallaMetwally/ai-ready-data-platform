@@ -1,0 +1,2347 @@
+[
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00001",
+    "field": "account_number",
+    "correct_value": "0000288389",
+    "messy_value": "288389"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00001",
+    "field": "member_name",
+    "correct_value": "Zoë Müller",
+    "messy_value": "ZoÃ« MÃ¼ller"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00001",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00002",
+    "field": "service_date",
+    "correct_value": "2025-10-07",
+    "messy_value": "2025.10.07"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00002",
+    "field": "member_id",
+    "correct_value": "7316976265679753",
+    "messy_value": "7.31698E+15"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00003",
+    "field": "account_number",
+    "correct_value": "0000800581",
+    "messy_value": "800581"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00003",
+    "field": "member_id",
+    "correct_value": "1920627685560185",
+    "messy_value": "1.92063E+15"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00003",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00004",
+    "field": "service_date",
+    "correct_value": "2025-11-13",
+    "messy_value": "Nov 13, 2025"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00004",
+    "field": "member_id",
+    "correct_value": "6662286581849394",
+    "messy_value": "6.66229E+15"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00004",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00005",
+    "field": "service_date",
+    "correct_value": "2025-08-21",
+    "messy_value": "2025.08.21"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00005",
+    "field": "account_number",
+    "correct_value": "0208449460",
+    "messy_value": "208449460"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00006",
+    "field": "account_number",
+    "correct_value": "0362863730",
+    "messy_value": "362863730"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00007",
+    "field": "service_date",
+    "correct_value": "2025-04-19",
+    "messy_value": "2025.04.19"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00007",
+    "field": "account_number",
+    "correct_value": "0530747414",
+    "messy_value": "530747414"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00008",
+    "field": "service_date",
+    "correct_value": "2025-10-27",
+    "messy_value": "2025.10.27"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00008",
+    "field": "account_number",
+    "correct_value": "0000588637",
+    "messy_value": "588637"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00008",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00009",
+    "field": "service_date",
+    "correct_value": "2025-12-15",
+    "messy_value": "15-Dec-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00009",
+    "field": "account_number",
+    "correct_value": "0264112119",
+    "messy_value": "264112119"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00009",
+    "field": "member_name",
+    "correct_value": "José Álvarez",
+    "messy_value": "JosÃ© Ãlvarez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00009",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00010",
+    "field": "service_date",
+    "correct_value": "2025-11-25",
+    "messy_value": "Nov 25, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00010",
+    "field": "account_number",
+    "correct_value": "0676567501",
+    "messy_value": "676567501"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00010",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00011",
+    "field": "service_date",
+    "correct_value": "2025-06-02",
+    "messy_value": "Jun 02, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00011",
+    "field": "account_number",
+    "correct_value": "0214257751",
+    "messy_value": "214257751"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00011",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00012",
+    "field": "service_date",
+    "correct_value": "2025-01-10",
+    "messy_value": "Jan 10, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00012",
+    "field": "account_number",
+    "correct_value": "0743111853",
+    "messy_value": "743111853"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00013",
+    "field": "service_date",
+    "correct_value": "2025-03-06",
+    "messy_value": "Mar 06, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00013",
+    "field": "account_number",
+    "correct_value": "0916690353",
+    "messy_value": "916690353"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00013",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00013",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00014",
+    "field": "service_date",
+    "correct_value": "2025-11-29",
+    "messy_value": "29/11/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00014",
+    "field": "account_number",
+    "correct_value": "0528414718",
+    "messy_value": "528414718"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00014",
+    "field": "member_id",
+    "correct_value": "7050019761331134",
+    "messy_value": "7.05002E+15"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00014",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00014",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00015",
+    "field": "account_number",
+    "correct_value": "0000661759",
+    "messy_value": "661759"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00015",
+    "field": "member_name",
+    "correct_value": "José Álvarez",
+    "messy_value": "JosÃ© Ãlvarez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00015",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00016",
+    "field": "service_date",
+    "correct_value": "2025-07-28",
+    "messy_value": "28-Jul-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00016",
+    "field": "account_number",
+    "correct_value": "0360916298",
+    "messy_value": "360916298"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00016",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00017",
+    "field": "service_date",
+    "correct_value": "2025-02-25",
+    "messy_value": "25-Feb-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00017",
+    "field": "account_number",
+    "correct_value": "0000763587",
+    "messy_value": "763587"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00017",
+    "field": "member_name",
+    "correct_value": "Zoë Müller",
+    "messy_value": "ZoÃ« MÃ¼ller"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00018",
+    "field": "service_date",
+    "correct_value": "2025-01-08",
+    "messy_value": "08-Jan-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00018",
+    "field": "account_number",
+    "correct_value": "0000683823",
+    "messy_value": "683823"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00018",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00019",
+    "field": "account_number",
+    "correct_value": "0000409386",
+    "messy_value": "409386"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00019",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00020",
+    "field": "member_name",
+    "correct_value": "José Álvarez",
+    "messy_value": "JosÃ© Ãlvarez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00020",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00021",
+    "field": "account_number",
+    "correct_value": "0825003955",
+    "messy_value": "825003955"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00021",
+    "field": "member_name",
+    "correct_value": "Zoë Müller",
+    "messy_value": "ZoÃ« MÃ¼ller"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00021",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00022",
+    "field": "service_date",
+    "correct_value": "2025-05-16",
+    "messy_value": "2025.05.16"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00022",
+    "field": "account_number",
+    "correct_value": "0000750981",
+    "messy_value": "750981"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00022",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00023",
+    "field": "service_date",
+    "correct_value": "2025-09-17",
+    "messy_value": "Sep 17, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00023",
+    "field": "account_number",
+    "correct_value": "0178663096",
+    "messy_value": "178663096"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00024",
+    "field": "service_date",
+    "correct_value": "2025-12-06",
+    "messy_value": "06/12/2025"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00024",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00025",
+    "field": "service_date",
+    "correct_value": "2025-05-16",
+    "messy_value": "16/05/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00025",
+    "field": "account_number",
+    "correct_value": "0318610946",
+    "messy_value": "318610946"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00025",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00025",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00026",
+    "field": "service_date",
+    "correct_value": "2025-08-07",
+    "messy_value": "Aug 07, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00026",
+    "field": "account_number",
+    "correct_value": "0000463298",
+    "messy_value": "463298"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00026",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00026",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00027",
+    "field": "service_date",
+    "correct_value": "2025-01-21",
+    "messy_value": "Jan 21, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00027",
+    "field": "account_number",
+    "correct_value": "0000978413",
+    "messy_value": "978413"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00027",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00028",
+    "field": "service_date",
+    "correct_value": "2025-04-01",
+    "messy_value": "2025.04.01"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00029",
+    "field": "service_date",
+    "correct_value": "2025-07-15",
+    "messy_value": "Jul 15, 2025"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00029",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00030",
+    "field": "account_number",
+    "correct_value": "0527849588",
+    "messy_value": "527849588"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00030",
+    "field": "member_name",
+    "correct_value": "José Álvarez",
+    "messy_value": "JosÃ© Ãlvarez"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00031",
+    "field": "service_date",
+    "correct_value": "2025-11-02",
+    "messy_value": "02-Nov-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00031",
+    "field": "account_number",
+    "correct_value": "0000278361",
+    "messy_value": "278361"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00031",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00031",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00032",
+    "field": "service_date",
+    "correct_value": "2025-12-18",
+    "messy_value": "Dec 18, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00032",
+    "field": "account_number",
+    "correct_value": "0000970535",
+    "messy_value": "970535"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00032",
+    "field": "member_id",
+    "correct_value": "5849944959090432",
+    "messy_value": "5.84994E+15"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00033",
+    "field": "service_date",
+    "correct_value": "2025-06-03",
+    "messy_value": "2025.06.03"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00033",
+    "field": "account_number",
+    "correct_value": "0233815413",
+    "messy_value": "233815413"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00033",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00033",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00034",
+    "field": "account_number",
+    "correct_value": "0423142470",
+    "messy_value": "423142470"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00034",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00035",
+    "field": "account_number",
+    "correct_value": "0000944956",
+    "messy_value": "944956"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00036",
+    "field": "service_date",
+    "correct_value": "2025-05-06",
+    "messy_value": "06-May-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00036",
+    "field": "account_number",
+    "correct_value": "0258220114",
+    "messy_value": "258220114"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00036",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00037",
+    "field": "account_number",
+    "correct_value": "0000721024",
+    "messy_value": "721024"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00037",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00038",
+    "field": "service_date",
+    "correct_value": "2025-08-15",
+    "messy_value": "15-Aug-25"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00039",
+    "field": "service_date",
+    "correct_value": "2025-09-24",
+    "messy_value": "24-Sep-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00039",
+    "field": "account_number",
+    "correct_value": "0784683755",
+    "messy_value": "784683755"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00039",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00039",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00040",
+    "field": "service_date",
+    "correct_value": "2025-12-28",
+    "messy_value": "2025.12.28"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00040",
+    "field": "account_number",
+    "correct_value": "0000401641",
+    "messy_value": "401641"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00040",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00041",
+    "field": "service_date",
+    "correct_value": "2025-10-22",
+    "messy_value": "2025.10.22"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00041",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00042",
+    "field": "service_date",
+    "correct_value": "2025-05-20",
+    "messy_value": "2025.05.20"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00042",
+    "field": "account_number",
+    "correct_value": "0336801619",
+    "messy_value": "336801619"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00043",
+    "field": "service_date",
+    "correct_value": "2025-07-21",
+    "messy_value": "21/07/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00043",
+    "field": "account_number",
+    "correct_value": "0673510887",
+    "messy_value": "673510887"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00043",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00044",
+    "field": "service_date",
+    "correct_value": "2025-07-14",
+    "messy_value": "14/07/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00044",
+    "field": "account_number",
+    "correct_value": "0000476786",
+    "messy_value": "476786"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00044",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00045",
+    "field": "service_date",
+    "correct_value": "2025-01-21",
+    "messy_value": "21/01/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00045",
+    "field": "account_number",
+    "correct_value": "0938842599",
+    "messy_value": "938842599"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00045",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00045",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00046",
+    "field": "service_date",
+    "correct_value": "2025-11-07",
+    "messy_value": "07/11/2025"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00046",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00046",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00047",
+    "field": "service_date",
+    "correct_value": "2025-04-12",
+    "messy_value": "Apr 12, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00047",
+    "field": "account_number",
+    "correct_value": "0502982778",
+    "messy_value": "502982778"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00048",
+    "field": "service_date",
+    "correct_value": "2025-12-05",
+    "messy_value": "2025.12.05"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00048",
+    "field": "account_number",
+    "correct_value": "0472807202",
+    "messy_value": "472807202"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00048",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00048",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00049",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00050",
+    "field": "account_number",
+    "correct_value": "0193053577",
+    "messy_value": "193053577"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00050",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00050",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00051",
+    "field": "service_date",
+    "correct_value": "2025-11-02",
+    "messy_value": "02/11/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00051",
+    "field": "account_number",
+    "correct_value": "0465436049",
+    "messy_value": "465436049"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00051",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00051",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00052",
+    "field": "service_date",
+    "correct_value": "2025-08-18",
+    "messy_value": "Aug 18, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00052",
+    "field": "account_number",
+    "correct_value": "0793532952",
+    "messy_value": "793532952"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00052",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00053",
+    "field": "service_date",
+    "correct_value": "2025-06-30",
+    "messy_value": "2025.06.30"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00053",
+    "field": "account_number",
+    "correct_value": "0000782169",
+    "messy_value": "782169"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00053",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00054",
+    "field": "service_date",
+    "correct_value": "2025-10-29",
+    "messy_value": "2025.10.29"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00054",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00055",
+    "field": "service_date",
+    "correct_value": "2025-01-24",
+    "messy_value": "Jan 24, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00055",
+    "field": "account_number",
+    "correct_value": "0000560081",
+    "messy_value": "560081"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00055",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00055",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00056",
+    "field": "service_date",
+    "correct_value": "2025-05-10",
+    "messy_value": "10/05/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00056",
+    "field": "account_number",
+    "correct_value": "0000193319",
+    "messy_value": "193319"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00056",
+    "field": "member_id",
+    "correct_value": "1462761103121051",
+    "messy_value": "1.46276E+15"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00056",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00057",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00057",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00058",
+    "field": "service_date",
+    "correct_value": "2025-01-31",
+    "messy_value": "Jan 31, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00058",
+    "field": "account_number",
+    "correct_value": "0427899537",
+    "messy_value": "427899537"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00058",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00058",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00059",
+    "field": "service_date",
+    "correct_value": "2025-08-29",
+    "messy_value": "2025.08.29"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00060",
+    "field": "service_date",
+    "correct_value": "2025-10-06",
+    "messy_value": "Oct 06, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00060",
+    "field": "account_number",
+    "correct_value": "0312406764",
+    "messy_value": "312406764"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00060",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00061",
+    "field": "account_number",
+    "correct_value": "0000491465",
+    "messy_value": "491465"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00061",
+    "field": "member_id",
+    "correct_value": "3739010976691062",
+    "messy_value": "3.73901E+15"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00061",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00061",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00062",
+    "field": "service_date",
+    "correct_value": "2025-10-22",
+    "messy_value": "2025.10.22"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00062",
+    "field": "account_number",
+    "correct_value": "0000240044",
+    "messy_value": "240044"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00062",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00062",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00063",
+    "field": "service_date",
+    "correct_value": "2025-09-09",
+    "messy_value": "09-Sep-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00063",
+    "field": "account_number",
+    "correct_value": "0000613762",
+    "messy_value": "613762"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00063",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00064",
+    "field": "service_date",
+    "correct_value": "2025-10-09",
+    "messy_value": "2025.10.09"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00064",
+    "field": "account_number",
+    "correct_value": "0529982328",
+    "messy_value": "529982328"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00064",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00064",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00065",
+    "field": "service_date",
+    "correct_value": "2025-07-05",
+    "messy_value": "05-Jul-25"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00065",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00066",
+    "field": "service_date",
+    "correct_value": "2025-11-19",
+    "messy_value": "Nov 19, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00066",
+    "field": "account_number",
+    "correct_value": "0620455331",
+    "messy_value": "620455331"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00066",
+    "field": "member_id",
+    "correct_value": "1260030726522806",
+    "messy_value": "1.26003E+15"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00066",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00066",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00067",
+    "field": "member_name",
+    "correct_value": "Zoë Müller",
+    "messy_value": "ZoÃ« MÃ¼ller"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00067",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00068",
+    "field": "service_date",
+    "correct_value": "2025-03-11",
+    "messy_value": "2025.03.11"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00069",
+    "field": "service_date",
+    "correct_value": "2025-09-08",
+    "messy_value": "08-Sep-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00069",
+    "field": "account_number",
+    "correct_value": "0722687986",
+    "messy_value": "722687986"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00069",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00069",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00070",
+    "field": "service_date",
+    "correct_value": "2025-04-30",
+    "messy_value": "2025.04.30"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00070",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00071",
+    "field": "service_date",
+    "correct_value": "2025-10-30",
+    "messy_value": "30/10/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00071",
+    "field": "account_number",
+    "correct_value": "0000038817",
+    "messy_value": "38817"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00072",
+    "field": "service_date",
+    "correct_value": "2025-06-23",
+    "messy_value": "23/06/2025"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00073",
+    "field": "service_date",
+    "correct_value": "2025-10-05",
+    "messy_value": "2025.10.05"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00073",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00073",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00074",
+    "field": "service_date",
+    "correct_value": "2025-01-15",
+    "messy_value": "2025.01.15"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00074",
+    "field": "account_number",
+    "correct_value": "0000727712",
+    "messy_value": "727712"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00074",
+    "field": "member_name",
+    "correct_value": "Zoë Müller",
+    "messy_value": "ZoÃ« MÃ¼ller"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00074",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00075",
+    "field": "service_date",
+    "correct_value": "2025-11-14",
+    "messy_value": "Nov 14, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00075",
+    "field": "account_number",
+    "correct_value": "0000639098",
+    "messy_value": "639098"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00075",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00076",
+    "field": "service_date",
+    "correct_value": "2025-02-07",
+    "messy_value": "2025.02.07"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00076",
+    "field": "account_number",
+    "correct_value": "0827579147",
+    "messy_value": "827579147"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00076",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00077",
+    "field": "service_date",
+    "correct_value": "2025-10-20",
+    "messy_value": "2025.10.20"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00077",
+    "field": "account_number",
+    "correct_value": "0214518079",
+    "messy_value": "214518079"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00077",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "missing_value",
+    "claim_id": "CLM00077",
+    "field": "amount",
+    "correct_value": "1445.45",
+    "messy_value": ""
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00078",
+    "field": "service_date",
+    "correct_value": "2025-05-27",
+    "messy_value": "2025.05.27"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00078",
+    "field": "account_number",
+    "correct_value": "0900122509",
+    "messy_value": "900122509"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00078",
+    "field": "member_name",
+    "correct_value": "José Álvarez",
+    "messy_value": "JosÃ© Ãlvarez"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00079",
+    "field": "service_date",
+    "correct_value": "2025-06-08",
+    "messy_value": "2025.06.08"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00079",
+    "field": "member_id",
+    "correct_value": "1355089197208593",
+    "messy_value": "1.35509E+15"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00079",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00080",
+    "field": "service_date",
+    "correct_value": "2025-07-07",
+    "messy_value": "2025.07.07"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00081",
+    "field": "service_date",
+    "correct_value": "2025-03-14",
+    "messy_value": "14-Mar-25"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00081",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "missing_value",
+    "claim_id": "CLM00081",
+    "field": "amount",
+    "correct_value": "3020.29",
+    "messy_value": ""
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00082",
+    "field": "service_date",
+    "correct_value": "2025-12-11",
+    "messy_value": "2025.12.11"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00082",
+    "field": "account_number",
+    "correct_value": "0000386490",
+    "messy_value": "386490"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00082",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00083",
+    "field": "service_date",
+    "correct_value": "2025-02-02",
+    "messy_value": "2025.02.02"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00083",
+    "field": "account_number",
+    "correct_value": "0000639717",
+    "messy_value": "639717"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00083",
+    "field": "member_id",
+    "correct_value": "6833532906374476",
+    "messy_value": "6.83353E+15"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00083",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "missing_value",
+    "claim_id": "CLM00083",
+    "field": "amount",
+    "correct_value": "2547.08",
+    "messy_value": ""
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00084",
+    "field": "account_number",
+    "correct_value": "0000246205",
+    "messy_value": "246205"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00084",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00084",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00085",
+    "field": "service_date",
+    "correct_value": "2025-07-09",
+    "messy_value": "2025.07.09"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00085",
+    "field": "account_number",
+    "correct_value": "0400368694",
+    "messy_value": "400368694"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00085",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00086",
+    "field": "member_id",
+    "correct_value": "8638405843410671",
+    "messy_value": "8.63841E+15"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00086",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00087",
+    "field": "service_date",
+    "correct_value": "2025-04-17",
+    "messy_value": "Apr 17, 2025"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00087",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00088",
+    "field": "account_number",
+    "correct_value": "0000182973",
+    "messy_value": "182973"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00088",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00089",
+    "field": "account_number",
+    "correct_value": "0000066645",
+    "messy_value": "66645"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00090",
+    "field": "service_date",
+    "correct_value": "2025-02-01",
+    "messy_value": "01/02/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00090",
+    "field": "account_number",
+    "correct_value": "0000674591",
+    "messy_value": "674591"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00090",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00091",
+    "field": "service_date",
+    "correct_value": "2025-11-21",
+    "messy_value": "21-Nov-25"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00091",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00092",
+    "field": "service_date",
+    "correct_value": "2025-10-10",
+    "messy_value": "10-Oct-25"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00092",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00093",
+    "field": "service_date",
+    "correct_value": "2025-03-20",
+    "messy_value": "20/03/2025"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00093",
+    "field": "member_id",
+    "correct_value": "4371404393215276",
+    "messy_value": "4.37140E+15"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00093",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00094",
+    "field": "service_date",
+    "correct_value": "2025-12-10",
+    "messy_value": "10-Dec-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00095",
+    "field": "account_number",
+    "correct_value": "0000532060",
+    "messy_value": "532060"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00095",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00096",
+    "field": "service_date",
+    "correct_value": "2025-11-08",
+    "messy_value": "08/11/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00096",
+    "field": "account_number",
+    "correct_value": "0790092970",
+    "messy_value": "790092970"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00096",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00096",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "missing_value",
+    "claim_id": "CLM00096",
+    "field": "amount",
+    "correct_value": "3717.40",
+    "messy_value": ""
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00097",
+    "field": "account_number",
+    "correct_value": "0530338918",
+    "messy_value": "530338918"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00097",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00098",
+    "field": "service_date",
+    "correct_value": "2025-01-27",
+    "messy_value": "27/01/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00098",
+    "field": "account_number",
+    "correct_value": "0709448939",
+    "messy_value": "709448939"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00098",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00098",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00099",
+    "field": "service_date",
+    "correct_value": "2025-12-14",
+    "messy_value": "2025.12.14"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00099",
+    "field": "account_number",
+    "correct_value": "0000450797",
+    "messy_value": "450797"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00099",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "missing_value",
+    "claim_id": "CLM00099",
+    "field": "amount",
+    "correct_value": "2718.77",
+    "messy_value": ""
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00100",
+    "field": "service_date",
+    "correct_value": "2025-05-11",
+    "messy_value": "11-May-25"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00100",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00101",
+    "field": "account_number",
+    "correct_value": "0000903625",
+    "messy_value": "903625"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00101",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00102",
+    "field": "service_date",
+    "correct_value": "2025-12-20",
+    "messy_value": "20/12/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00102",
+    "field": "account_number",
+    "correct_value": "0000993645",
+    "messy_value": "993645"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00102",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00102",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00103",
+    "field": "service_date",
+    "correct_value": "2025-09-19",
+    "messy_value": "Sep 19, 2025"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00104",
+    "field": "service_date",
+    "correct_value": "2025-11-05",
+    "messy_value": "Nov 05, 2025"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00104",
+    "field": "member_name",
+    "correct_value": "Sofía Núñez",
+    "messy_value": "SofÃ­a NÃºÃ±ez"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00104",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00105",
+    "field": "service_date",
+    "correct_value": "2025-11-18",
+    "messy_value": "18-Nov-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00105",
+    "field": "account_number",
+    "correct_value": "0770575153",
+    "messy_value": "770575153"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00105",
+    "field": "member_name",
+    "correct_value": "Mateo Peña",
+    "messy_value": "Mateo PeÃ±a"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00105",
+    "field": "description",
+    "correct_value": "Annual preventive screening and vaccination",
+    "messy_value": "Annual preventive screening an"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00106",
+    "field": "account_number",
+    "correct_value": "0000039434",
+    "messy_value": "39434"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00106",
+    "field": "member_name",
+    "correct_value": "François Dubois",
+    "messy_value": "FranÃ§ois Dubois"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00107",
+    "field": "service_date",
+    "correct_value": "2025-06-14",
+    "messy_value": "14/06/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00107",
+    "field": "account_number",
+    "correct_value": "0713811693",
+    "messy_value": "713811693"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00108",
+    "field": "service_date",
+    "correct_value": "2025-08-13",
+    "messy_value": "2025.08.13"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00108",
+    "field": "account_number",
+    "correct_value": "0000741995",
+    "messy_value": "741995"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00108",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00109",
+    "field": "service_date",
+    "correct_value": "2025-02-03",
+    "messy_value": "03-Feb-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00109",
+    "field": "account_number",
+    "correct_value": "0000661532",
+    "messy_value": "661532"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00110",
+    "field": "service_date",
+    "correct_value": "2025-06-29",
+    "messy_value": "29-Jun-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00110",
+    "field": "account_number",
+    "correct_value": "0000695847",
+    "messy_value": "695847"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00110",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00110",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00111",
+    "field": "service_date",
+    "correct_value": "2025-12-17",
+    "messy_value": "17-Dec-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00111",
+    "field": "account_number",
+    "correct_value": "0819532005",
+    "messy_value": "819532005"
+  },
+  {
+    "error_type": "scientific_notation",
+    "claim_id": "CLM00111",
+    "field": "member_id",
+    "correct_value": "8466597504301393",
+    "messy_value": "8.46660E+15"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00111",
+    "field": "member_name",
+    "correct_value": "Chloé Lefèvre",
+    "messy_value": "ChloÃ© LefÃ¨vre"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00112",
+    "field": "member_name",
+    "correct_value": "Åsa Lindqvist",
+    "messy_value": "Ãsa Lindqvist"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00112",
+    "field": "description",
+    "correct_value": "Outpatient consultation and follow-up laboratory panel",
+    "messy_value": "Outpatient consultation and fo"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00113",
+    "field": "service_date",
+    "correct_value": "2025-12-21",
+    "messy_value": "21-Dec-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00113",
+    "field": "account_number",
+    "correct_value": "0265627642",
+    "messy_value": "265627642"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00114",
+    "field": "service_date",
+    "correct_value": "2025-04-30",
+    "messy_value": "Apr 30, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00114",
+    "field": "account_number",
+    "correct_value": "0000784897",
+    "messy_value": "784897"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00114",
+    "field": "description",
+    "correct_value": "Physiotherapy session, lower back, 45 minutes",
+    "messy_value": "Physiotherapy session, lower b"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00115",
+    "field": "service_date",
+    "correct_value": "2025-04-13",
+    "messy_value": "13/04/2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00115",
+    "field": "account_number",
+    "correct_value": "0549533634",
+    "messy_value": "549533634"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00115",
+    "field": "description",
+    "correct_value": "Emergency department visit with imaging",
+    "messy_value": "Emergency department visit wit"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00116",
+    "field": "service_date",
+    "correct_value": "2025-03-24",
+    "messy_value": "24-Mar-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00116",
+    "field": "account_number",
+    "correct_value": "0406084084",
+    "messy_value": "406084084"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00117",
+    "field": "service_date",
+    "correct_value": "2025-05-01",
+    "messy_value": "May 01, 2025"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00117",
+    "field": "account_number",
+    "correct_value": "0000415712",
+    "messy_value": "415712"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00118",
+    "field": "service_date",
+    "correct_value": "2025-12-23",
+    "messy_value": "23-Dec-25"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00118",
+    "field": "account_number",
+    "correct_value": "0000961959",
+    "messy_value": "961959"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00118",
+    "field": "description",
+    "correct_value": "Dental cleaning and radiographs",
+    "messy_value": "Dental cleaning and radiograph"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00119",
+    "field": "service_date",
+    "correct_value": "2025-08-05",
+    "messy_value": "2025.08.05"
+  },
+  {
+    "error_type": "leading_zero_lost",
+    "claim_id": "CLM00119",
+    "field": "account_number",
+    "correct_value": "0880862406",
+    "messy_value": "880862406"
+  },
+  {
+    "error_type": "date_format",
+    "claim_id": "CLM00120",
+    "field": "service_date",
+    "correct_value": "2025-10-02",
+    "messy_value": "Oct 02, 2025"
+  },
+  {
+    "error_type": "encoding",
+    "claim_id": "CLM00120",
+    "field": "member_name",
+    "correct_value": "Zoë Müller",
+    "messy_value": "ZoÃ« MÃ¼ller"
+  },
+  {
+    "error_type": "truncation",
+    "claim_id": "CLM00120",
+    "field": "description",
+    "correct_value": "Prescription refill: chronic hypertension",
+    "messy_value": "Prescription refill: chronic h"
+  },
+  {
+    "error_type": "exact_duplicate",
+    "claim_id": "CLM00024",
+    "field": "*",
+    "correct_value": "",
+    "messy_value": ""
+  },
+  {
+    "error_type": "near_duplicate",
+    "claim_id": "CLM00086",
+    "field": "*",
+    "correct_value": "",
+    "messy_value": ""
+  },
+  {
+    "error_type": "exact_duplicate",
+    "claim_id": "CLM00011",
+    "field": "*",
+    "correct_value": "",
+    "messy_value": ""
+  },
+  {
+    "error_type": "exact_duplicate",
+    "claim_id": "CLM00068",
+    "field": "*",
+    "correct_value": "",
+    "messy_value": ""
+  }
+]
