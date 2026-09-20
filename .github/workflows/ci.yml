@@ -34,6 +34,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: DQ system unit tests
         run: cd dq && python3 -m unittest discover -s tests -v
+      - name: ETL loader unit tests
+        run: python3 -m unittest discover -s etl/tests -v
       - name: Full pipeline smoke test (run_all.py)
         run: python3 run_all.py --skip-ml   # models train fine locally; skipped here to keep CI fast
       - name: Unified API smoke test
